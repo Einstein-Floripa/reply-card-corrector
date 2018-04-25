@@ -102,3 +102,9 @@ venv.bak/
 
 # mypy
 .mypy_cache/
+
+
+reply_card_corrector/results/*.csv
+reply_card_corrector/results/failures/*
+reply_card_corrector/results/sucesses/*
+reply_card_corrector/scans/*
