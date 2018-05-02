@@ -1,4 +1,0 @@
-Falta de digito: 1
-Questao q12 em branco
-Questao q34 em branco
-Questao q41 em branco

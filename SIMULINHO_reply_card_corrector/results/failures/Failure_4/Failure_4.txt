@@ -1,7 +1,0 @@
-Falta de digito: 3
-Questao q01 em branco
-Questao q06 em branco
-Questao q15 em branco
-Questao q16 em branco
-Questao q27 em branco
-Questao q35 em branco
