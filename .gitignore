@@ -104,8 +104,7 @@ venv.bak/
 .mypy_cache/
 
 
-reply_card_corrector/results/*.csv
-reply_card_corrector/results/failures/*
-reply_card_corrector/results/successes/*
-reply_card_corrector/scans/*
-reply_card_corrector/info/*
+# Confidential files
+*.csv
+*.pdf
+*.jpg
