@@ -1,0 +1,1 @@
+Falha na leitura do digito 2duplo preenchimentoQuestao q12 em branco

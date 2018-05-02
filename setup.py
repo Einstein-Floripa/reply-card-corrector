@@ -4,7 +4,13 @@ setup(
     name='reply_card_corrector',
     version='0.1.0',
     packages=find_packages(),
-    install_requires=[],
+
+    author='Thiago Sant Helena',
+    author_email='thiago.sant.helena@gmail.com',
+
+    license='MIT',
+
+    install_requires=[opencv-python, numpy],
     entry_points='''
         [console_scripts]
         reply-card-corrector=reply_card_corrector.__main__:main
