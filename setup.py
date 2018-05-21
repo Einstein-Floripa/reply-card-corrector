@@ -11,8 +11,4 @@ setup(
     license='MIT',
 
     install_requires=[opencv-python, numpy],
-    entry_points='''
-        [console_scripts]
-        reply-card-corrector=reply_card_corrector.__main__:main
-    ''',
 )

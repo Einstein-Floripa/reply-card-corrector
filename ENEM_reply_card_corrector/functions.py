@@ -3,6 +3,7 @@ import numpy as np
 import csv
 import os
 
+
 # Debugging ways
 DEBUG = False
 
@@ -64,120 +65,6 @@ def check_square(mask, pt):
         return True
     else:
         return False
-
-
-def get_correction(read_answers, correct_answers):
-    """ @param read_answers: answers read from scanning
-        @param correct_answers: answers read from ansewers file
-
-
-        @return dict of questions with keys 'q01', 'q02', .. etc,
-        value is the ponctuation
-    """
-    score = dict()
-
-    for q in read_answers:
-        score[q] = correct(read_answers[q], correct_answers[q])
-
-    return score
-
-
-def correct(read_answer, correct_answer):
-    if read_answer == correct_answer:
-        return 1
-    else:
-        return 0
-
-
-# Read responses from warped  image, based  on positions
-def read_response(scan, response_pos):
-    """ @param scan: image read from scans folder
-        @param response_pos: dict returned from 
-        get_response_pos() function
-
-        @return [read answers, logs] where answers is a dict
-        and logs a list of strings
-    """
-    # Make a mask based on scaned image
-    letters = ['A', 'B', 'C', 'D', 'E']
-
-    # Check if image is in the right size, if it is not, resize
-    h, w, _ = scan.shape
-    if (h != 1401 or w != 1017):
-        scan = cv.resize(scan, (1017, 1401))
-
-    correction_mask = find_binary_mask(scan, [0, 0, 0], upper_boud_lecture)
-
-    lecture = dict()
-    logs = list()
-
-    # Loops over all questions position
-    for q in response_pos:
-        find_answer = False
-
-        # Loops over all possibles positions of a answer
-        for letter, pt in enumerate(response_pos[q]):
-            if (check_square(correction_mask, pt)):
-                if not find_answer:
-                    find_answer = True
-                    r = letters[letter]
-
-                else:
-                    r = '-'
-                    logs.append('Duplo preenchimento, ' +
-                                'questao ' + str(q) + '\n')
-
-        if find_answer:
-            lecture[q] = r
-        else:
-            lecture[q] = '-'
-            logs.append('Questao ' + str(q) + ' em branco\n')
-
-    return [lecture, logs]
-
-
-# Define positions
-def get_response_pos():
-    """ @return a dict with positions of the circles, need
-        to be adjusted for every reply-card format
-
-    """
-    # PS_60Q dimensions (1017, 1401)
-    x_dis_border_1A = 125
-    y_dis_border_1A = 625
-
-    x_dis_between_item_inside_box = 41
-    y_dis_between_question_inside_box = 24
-
-    x_dis_between_item_another_box = 325
-    y_dis_between_item_another_box = 315
-
-    positions = dict()
-
-    #  _____________________
-    # |Box 0 | Box 1 | Box 2|
-    # |______|_______|______|
-    # |Box 3 | Box 4 | Box 5|
-    # |______|_______|______|
-
-    for box in range(6):
-        for q in range(10):
-            question = list()
-            q_number = 'q' + str(box*10 + q + 1).zfill(2)
-
-            for item in range(5):
-                x = int(x_dis_border_1A +
-                        x_dis_between_item_inside_box * item +
-                        x_dis_between_item_another_box * (box % 3))
-                y = int(y_dis_border_1A +
-                        y_dis_between_question_inside_box * q +
-                        y_dis_between_item_another_box * (box > 2))
-
-                question.append((x, y))
-
-            positions[q_number] = question
-
-    return positions
 
 
 # CPF fields positions
@@ -276,23 +163,6 @@ def save_logs(logs_cpf, logs_ans, scanned, cpf, path):
             f.write(item)
 
     cv.imwrite(path + cpf + '.jpg', scanned)
-
-
-def export_to(responses, cpf, filename, headers):
-    """ @param responses: read answers
-        @param cpf: read cpf
-        @param filename: name of file to be appended the data
-        @param headers: headers wrotten on file at the beggining
-
-
-        Append read information to the output file
-
-        @return None
-    """
-    with open(filename, 'a') as f:
-        responses['cpf'] = cpf
-        writer = csv.DictWriter(f, headers)
-        writer.writerow(responses)
 
 
 def find_squares(img):
@@ -458,87 +328,3 @@ def adjust_to_squares(squares, img):
     warp = cv.resize(warp, (1017, 1401))
 
     return warp
-
-
-def generate_error_report(scanned, warped, squares, logs, count,
-                          ans_pos, cpf_pos, path):
-    """ @param scanned: scanned image from scans folder
-
-        @param warped: warped image, to be saved with positions of answers and cpf,
-        for future analysis 
-
-        @param squares: squares finded on original image, to be displayed
-        on output image
-
-        @param logs: logs to be saved
-
-        @param count: failure count to name the folder 
-
-        @param ans_pos: positions of the answers circles, will be displayed
-        on output report
-
-        @param cpf_pos: postitions of the cpf circles, will be displayed
-        on output report
-
-        @param path: path to folder where te report will be generated
-
-
-    """
-
-    fail = 'Failure_' + str(count)
-    path += fail + '/'
-    os.mkdir(path)
-
-    tmp = cv.drawContours(scanned, squares, -1, (0, 0, 255), 2)
-    cv.imwrite(path + 'Scanned_Found_Squares' + fail + '.jpg', tmp)
-
-    tmp = warped.copy()
-
-    for q in ans_pos:
-        for pt in ans_pos[q]:
-            cv.rectangle(tmp,
-                         (pt[0] - 1, pt[1] - 1),
-                         (pt[0] + 1, pt[1] + 1),
-                         (0, 0, 255), 1)
-
-    for digit in cpf_pos:
-        for pt in cpf_pos[digit]:
-            cv.rectangle(tmp,
-                         (pt[0] - 1, pt[1] - 1),
-                         (pt[0] + 1, pt[1] + 1),
-                         (0, 0, 255), 1)
-
-    cv.imwrite(path + 'Positions_On_Warped_' + fail + '.jpg', tmp)
-
-    with open(path + fail + '.txt', 'w') as f:
-        for log in logs:
-            f.write(log)
-
-
-def correct_image_angle(img):
-    """ @param img: img to be corrected, using as reference
-       the rectangle on top of page
-
-    @return img on the right orientation
-    """
-    mask = find_binary_mask(img, [0, 0, 0], [180, 180, 180])
-    _, contours, hierarchy = cv.findContours(mask,
-                                             cv.RETR_TREE,
-                                             cv.CHAIN_APPROX_SIMPLE)
-
-    height, width, _ = img.shape
-    biggest_area = 0
-
-    for cnt in contours:
-        area = cv.contourArea(cnt)
-        x, y, w, h = cv.boundingRect(cnt)
-        if area > biggest_area and (y > height*13/14 or (y+h) < height/14):
-            biggest_area = area
-            ref_cnt = cnt
-
-    x, y, w, h = cv.boundingRect(ref_cnt)
-    if y > height*9/10:
-        return cv.rotate(img, cv.ROTATE_180)
-
-    else:
-        return img

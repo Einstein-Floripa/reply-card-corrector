@@ -12,7 +12,7 @@ Simple reply-card reader created to optimize time used by volunteers of
 * Generate perfomance report
 
 * Make code for reading models
-    - UFSC
-    - ENEM
-    - UDESC
+    - [x]UFSC
+    - []ENEM
+    - []UDESC
 

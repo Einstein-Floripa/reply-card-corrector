@@ -1,5 +1,6 @@
 import csv
 import answers
+import os
 from functions import *
 from pprint import pprint
 from operator import itemgetter
@@ -7,10 +8,11 @@ from operator import itemgetter
 
 def run():
     print('Linking tables...')
-    answers_table_path = 'reply_card_corrector/info/data.csv'
-    subscribers_table_path = 'reply_card_corrector/info/subscribers.csv'
-    class_table_path = 'reply_card_corrector/info/class.csv'
-    output_data_path = 'reply_card_corrector/info/organized_data.csv'
+    app_folder = 'SIMULINHO_reply_card_corrector/'
+    answers_table_path = app_folder + 'info/data.csv'
+    subscribers_table_path = app_folder + 'info/subscribers.csv'
+    class_table_path = app_folder + 'info/class.csv'
+    output_data_path = app_folder + 'info/organized_data.csv'
 
     if not os.path.exists(output_data_path):
         with open(output_data_path, 'w') as f:
@@ -75,4 +77,5 @@ def run():
             for key in keys:
                 responses.append(student['answers'][key])
 
-            writer.writerow([student['name'], student['cpf'], *responses])
+            writer.writerow([student['name'], student['cpf'],
+                             student['lang'], student['quota'], *responses])
