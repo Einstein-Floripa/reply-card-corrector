@@ -1,3 +1,4 @@
+from collections import namedtuple
 import cv2 as cv
 import numpy as np
 import csv
@@ -6,6 +7,9 @@ import os
 
 # Debugging ways
 DEBUG = False
+
+Point = namedtuple('Point', ['x', 'y'])
+
 
 # Upper bound
 upper_boud_lecture = [250, 130, 130]
@@ -25,7 +29,10 @@ def show_img(img):
         @return: None
     """
     cv.imshow('Image', img)
-    cv.waitKey(0)
+    while True:
+        if cv.waitKey(1) & 0xFF == ord('q'):
+            break
+
     cv.destroyAllWindows()
 
 
@@ -76,7 +83,7 @@ def get_cpf_pos():
     positions = dict()
 
     x_dis_digit_1_0 = 175
-    y_dis_digit_1_0 = 340
+    y_dis_digit_1_0 = 285
 
     x_dis_between_digits_in_block = 21
     y_dis_between_digitis_in_block = 22
@@ -94,7 +101,7 @@ def get_cpf_pos():
             y = int(y_dis_digit_1_0 +
                     y_dis_between_digitis_in_block * item)
 
-            nums.append((x, y))
+            nums.append(Point(x=x, y=y))
 
         positions[digit] = nums
 
@@ -207,10 +214,10 @@ def find_squares(img):
         # Arbitrary division of the page. Just separate all square-like
         # contours in four groups based on their most internal  points,
         # the ones in top_left region, top_right, etc
-        if rect[2][0] < width/6 and rect[2][1] < height/10:
+        if rect[2][0] < width/6 and rect[2][1] < height/11:
             top_left_cnts.append(cnt)
 
-        elif rect[3][0] > width*5/6 and rect[3][1] < height/10:
+        elif rect[3][0] > width*5/6 and rect[3][1] < height/11:
             top_right_cnts.append(cnt)
 
         elif rect[0][0] > width*5/6 and rect[0][1] > height*9/10:
@@ -228,7 +235,7 @@ def find_squares(img):
         show_img(cv.drawContours(img, four_pts_cnts,
                                  -1, (0, 0, 255), 2))
 
-    # Order list from biggest to smallest, to take only the first
+    # Order list from biggest to smallest, to take only th  e first
     # Expecting that only the biggest square that is inside the range
     # is the one to be used
     top_left_cnts.sort(key=lambda k: cv.contourArea(k), reverse=True)
@@ -328,3 +335,150 @@ def adjust_to_squares(squares, img):
     warp = cv.resize(warp, (1017, 1401))
 
     return warp
+
+
+# Define positions
+def get_response_pos():
+    """ @return a dict with positions of the circles, need
+        to be adjusted for every reply-card format
+
+    """
+    # ENEM_format size (1017, 1401)
+    x_dis_border_1A = 80
+    y_dis_border_1A = 617
+
+    x_dis_between_item_inside_box = 29
+    y_dis_between_question_inside_box = 24
+
+    x_dis_between_item_another_box = 190
+    y_dis_between_item_another_box = 338
+
+    positions = dict()
+
+    # One question per box
+    #  _______________________
+    # |Box 0 |  ...  | Box 4 |
+    # |_______|_______|_______|
+    # |Box 6  | ... | Box 8 |
+    # |_______|_____|_______|
+
+    for box in range(9):
+        for q in range(10):
+            question = list()
+            q_number = 'q' + str(box*10 + q + 1).zfill(2)
+
+            for item in range(5):
+                x = int(x_dis_border_1A +
+                        x_dis_between_item_inside_box * item +
+                        x_dis_between_item_another_box * (box % 5))
+                y = int(y_dis_border_1A +
+                        y_dis_between_question_inside_box * q +
+                        y_dis_between_item_another_box * (box > 4))
+
+                question.append(Point(x=x, y=y))
+
+            positions[q_number] = question
+
+    return positions
+
+
+def correct_image_angle(img):
+    """ @param img: img to be corrected, using as reference
+       the rectangle on top of page
+
+        @return img on the right orientation
+    """
+    mask = find_binary_mask(img, [0, 0, 0], [180, 180, 180])
+    _, contours, hierarchy = cv.findContours(mask,
+                                             cv.RETR_TREE,
+                                             cv.CHAIN_APPROX_SIMPLE)
+
+    height, width, _ = img.shape
+    biggest_area = 0
+
+    for cnt in contours:
+        area = cv.contourArea(cnt)
+        x, y, w, h = cv.boundingRect(cnt)
+        if area > biggest_area and (y > height*13/14 or (y+h) < height/14):
+            biggest_area = area
+            ref_cnt = cnt
+
+    x, y, w, h = cv.boundingRect(ref_cnt)
+    if y > height*9/10:
+        return cv.rotate(img, cv.ROTATE_180)
+
+    else:
+        return img
+
+
+def check_day(warped):
+    correction_mask = find_binary_mask(warped, [0, 0, 0], [180, 180, 180])
+    pos_1 = Point(x=873, y=336)
+    pos_2 = Point(x=873, y=361)
+
+    if check_square(correction_mask, pos_1):
+        return 1
+    elif check_square(correction_mask, pos_2):
+        return 2
+
+
+if __name__ == '__main__':
+    app_folder = 'ENEM_reply_card_corrector/'
+    failures_path = app_folder + 'results/failures/'
+    successes_path = app_folder + 'results/successes/'
+    samples_path = app_folder + 'scans/'
+    output_csv = app_folder + 'info/data.csv'
+
+    samples = os.listdir(samples_path)
+    headers = ['cpf', *list(get_response_pos().keys()), 'day']
+
+    filenames = [i for i in samples if "scan" in i]
+
+    for filename in filenames:
+
+        print('Scanning ' + filename + '...')
+
+        scanned = cv.imread(samples_path + filename)
+
+        scanned = correct_image_angle(scanned)
+
+        squares = find_squares(scanned)
+
+        warped = adjust_to_squares(squares, scanned)
+
+        responses_positions = get_response_pos()
+        # responses, logs_ans = read_response(warped, responses_positions)
+
+        cpf_positions = get_cpf_pos()
+        cpf, logs_cpf = read_cpf(warped, cpf_positions)
+
+        day = check_day(warped)
+
+        for key in cpf_positions:
+            for pt in cpf_positions[key]:
+                cv.rectangle(warped,
+                             (pt.x - 1, pt.y - 1),
+                             (pt.x + 1,  pt.y + 1),
+                             (0, 0, 255))
+
+        for q in responses_positions:
+            for pt in responses_positions[q]:
+                cv.rectangle(warped,
+                             (pt.x - 1, pt.y - 1),
+                             (pt.x + 1,  pt.y + 1),
+                             (0, 0, 255))
+
+        pos_1 = Point(x=873, y=336)
+        pos_2 = Point(x=873, y=361)
+
+        cv.rectangle(warped,
+                     (pos_1.x - 1, pos_1.y - 1),
+                     (pos_1.x + 1,  pos_1.y + 1),
+                     (0, 0, 255))
+
+        cv.rectangle(warped,
+                     (pos_2.x - 1, pos_2.y - 1),
+                     (pos_2.x + 1,  pos_2.y + 1),
+                     (0, 0, 255))
+
+        show_img(warped)

@@ -1,4 +1,4 @@
-import cv2 as cv
+cd ..import cv2 as cv
 import numpy as np
 import csv
 import os
