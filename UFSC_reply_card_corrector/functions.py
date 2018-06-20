@@ -519,7 +519,7 @@ def generate_error_report(scanned, warped, squares, logs, count,
         for log in logs:
             f.write(log)
 
-    with open(fail + '.csv', 'w') as f:
+    with open(path + fail + '.csv', 'w') as f:
         responses['cpf'] = 'FAILED'
         responses['day'] = day
         writer = csv.DictWriter(f, headers)

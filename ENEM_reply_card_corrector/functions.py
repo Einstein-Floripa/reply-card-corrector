@@ -63,7 +63,7 @@ def check_square(mask, pt):
         @return True if points in a squares around the point
         are mostly white.
     """
-    sample = mask[pt[1] - 3: pt[1] + 3, pt[0] - 3: pt[0] + 3]
+    sample = mask[pt.y - 3: pt.y + 3, pt.x - 3: pt.x + 3]
     h, w = sample.shape
 
     # if 40% of the square is white, it will be recognized as
@@ -151,25 +151,26 @@ def read_cpf(img, cpf_pos):
     return [cpf, logs]
 
 
-def save_logs(logs_cpf, logs_ans, scanned, cpf, path):
+def save_logs(logs_cpf, logs_ans, scanned, cpf, path, day):
     """ @param logs_cpf: logs returned by read_cpf
         @param logs_ans: logs returned by read_answers
         @param scanned: image read from scans folder
         @param cpf: string cpf read from read_cpf func
         @param path: path to the file, where the data will be saved
+        @param day: day of the test
 
         Save informations about the correction, to future verification
 
         @return None
     """
-    with open(path + cpf + '.txt', 'w') as f:
+    with open(path + cpf + '-' + str(day) + '.txt', 'w') as f:
         for item in logs_cpf:
             f.write(item)
 
         for item in logs_ans:
             f.write(item)
 
-    cv.imwrite(path + cpf + '.jpg', scanned)
+    cv.imwrite(path + cpf + '-' + str(day) + '.jpg', scanned)
 
 
 def find_squares(img):
@@ -381,6 +382,45 @@ def get_response_pos():
 
     return positions
 
+# Read responses from warped  image, based  on positions
+
+
+def read_response(warp, response_pos):
+    """ @param warp: warped image got from adjust_to_squares
+        @param response_pos: response positions read from get_response_pos
+
+        @return [lecture, logs]
+    """
+    # Make a mask based on warped image
+    correction_mask = find_binary_mask(warp, [0, 0, 0], [180, 180, 180])
+    responses = ['A', 'B', 'C', 'D', 'E']
+    lecture = dict()
+    logs = list()
+    for question in response_pos:
+        find = False
+        double = False
+        value = str()
+
+        for n, pt in enumerate(response_pos[question]):
+            if (check_square(correction_mask, pt)):
+                if not find:
+                    find = True
+                    value = responses[n]
+                else:
+                    double = True
+
+        if double:
+            value = '-'
+            logs.append('Duplo preenchimento: ' + question + '\n')
+
+        if not find:
+            value = '-'
+            logs.append('Sem preenchimento: ' + question + '\n')
+
+        lecture[question] = value
+
+    return [lecture, logs]
+
 
 def correct_image_angle(img):
     """ @param img: img to be corrected, using as reference
@@ -422,6 +462,91 @@ def check_day(warped):
         return 2
 
 
+def generate_error_report(scanned, warped, squares, logs, count,
+                          ans_pos, cpf_pos, path, responses, day, headers):
+    """ @param scanned: scanned image from scans folder
+
+        @param warped: warped image, to be saved with positions of answers and
+        cpf, for future analysis
+
+        @param squares: squares finded on original image, to be displayed
+        on output image
+
+        @param logs: logs to be saved
+
+        @param count: failure count to name the folder
+
+        @param ans_pos: positions of the answers circles, will be displayed
+        on output report
+
+        @param cpf_pos: postitions of the cpf circles, will be displayed
+        on output report
+
+        @param path: path to folder where te report will be generated
+
+        @param responses: read responsese
+
+        @param day: day of the test
+
+        @param headers: headers of csv
+    """
+
+    fail = 'Failure_' + str(count)
+    path += fail + '/'
+    if not os.path.isdir(path):
+        os.mkdir(path)
+
+    tmp = cv.drawContours(scanned, squares, -1, (0, 0, 255), 2)
+    cv.imwrite(path + 'Scanned_Found_Squares' + fail + '.jpg', tmp)
+
+    tmp = warped.copy()
+
+    for q in ans_pos:
+        for pt in ans_pos[q]:
+            cv.rectangle(tmp,
+                         (pt.x - 1, pt.y - 1),
+                         (pt.x + 1, pt.y + 1),
+                         (0, 0, 255), 1)
+
+    for digit in cpf_pos:
+        for pt in cpf_pos[digit]:
+            cv.rectangle(tmp,
+                         (pt.x - 1, pt.y - 1),
+                         (pt.x + 1, pt.y + 1),
+                         (0, 0, 255), 1)
+
+    cv.imwrite(path + 'Positions_On_Warped_' + fail + '.jpg', tmp)
+
+    with open(path + fail + '.txt', 'w') as f:
+        for log in logs:
+            f.write(log)
+
+    with open(path + fail + '.csv', 'w') as f:
+        responses['cpf'] = 'FAILED'
+        responses['day'] = day
+        writer = csv.DictWriter(f, headers)
+        writer.writeheader()
+        writer.writerow(responses)
+
+
+def export_to(responses, cpf, filename, headers, day):
+    """ @param responses: read answers
+        @param cpf: read cpf
+        @param filename: name of file to be appended the data
+        @param headers: headers wrotten on file at the beggining
+        @param day: 1 or 2, corresponding to the day of test
+
+        Append read information to the output file
+
+        @return None
+    """
+    with open(filename, 'a') as f:
+        responses['cpf'] = cpf
+        responses['day'] = day
+        writer = csv.DictWriter(f, headers)
+        writer.writerow(responses)
+
+
 if __name__ == '__main__':
     app_folder = 'ENEM_reply_card_corrector/'
     failures_path = app_folder + 'results/failures/'
@@ -433,52 +558,3 @@ if __name__ == '__main__':
     headers = ['cpf', *list(get_response_pos().keys()), 'day']
 
     filenames = [i for i in samples if "scan" in i]
-
-    for filename in filenames:
-
-        print('Scanning ' + filename + '...')
-
-        scanned = cv.imread(samples_path + filename)
-
-        scanned = correct_image_angle(scanned)
-
-        squares = find_squares(scanned)
-
-        warped = adjust_to_squares(squares, scanned)
-
-        responses_positions = get_response_pos()
-        # responses, logs_ans = read_response(warped, responses_positions)
-
-        cpf_positions = get_cpf_pos()
-        cpf, logs_cpf = read_cpf(warped, cpf_positions)
-
-        day = check_day(warped)
-
-        for key in cpf_positions:
-            for pt in cpf_positions[key]:
-                cv.rectangle(warped,
-                             (pt.x - 1, pt.y - 1),
-                             (pt.x + 1,  pt.y + 1),
-                             (0, 0, 255))
-
-        for q in responses_positions:
-            for pt in responses_positions[q]:
-                cv.rectangle(warped,
-                             (pt.x - 1, pt.y - 1),
-                             (pt.x + 1,  pt.y + 1),
-                             (0, 0, 255))
-
-        pos_1 = Point(x=873, y=336)
-        pos_2 = Point(x=873, y=361)
-
-        cv.rectangle(warped,
-                     (pos_1.x - 1, pos_1.y - 1),
-                     (pos_1.x + 1,  pos_1.y + 1),
-                     (0, 0, 255))
-
-        cv.rectangle(warped,
-                     (pos_2.x - 1, pos_2.y - 1),
-                     (pos_2.x + 1,  pos_2.y + 1),
-                     (0, 0, 255))
-
-        show_img(warped)
