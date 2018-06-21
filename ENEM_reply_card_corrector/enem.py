@@ -72,6 +72,3 @@ def run():
             success_count += 1
             export_to(responses, cpf, output_csv, headers, day)
             save_logs(logs_cpf, logs_ans, warped, cpf, successes_path, day)
-
-
-run()

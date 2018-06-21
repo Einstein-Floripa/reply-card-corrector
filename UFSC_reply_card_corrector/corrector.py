@@ -74,7 +74,7 @@ def run():
     keys1.sort()
     keys2.sort()
 
-    with open(output_data_path, 'a') as f:
+    with open(output_data_path, 'a', encoding="latin-1") as f:
         writer = csv.writer(f)
         for student in students:
             responses = list()

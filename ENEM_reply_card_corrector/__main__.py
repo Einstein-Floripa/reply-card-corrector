@@ -1,5 +1,10 @@
+import enem
+import corrector
+
+
 def main():
-    pass
+    enem.run()
+    corrector.run()
 
 
 if __name__ == '__main__':
