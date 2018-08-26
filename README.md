@@ -6,13 +6,13 @@ Simple reply-card reader created to optimize time used by volunteers of
 # TO-DO
 
 * Creative process description in
-    - Portuguese
-    - English
+    - [x]Portuguese
+    - [ ]English
 
 * Generate perfomance report
 
 * Make code for reading models
     - [x]UFSC
-    - []ENEM
-    - []UDESC
+    - [x]ENEM
+    - [x]UDESC
 

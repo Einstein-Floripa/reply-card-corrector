@@ -123,14 +123,14 @@ def read_response(scan, response_pos):
                     r = letters[letter]
 
                 else:
-                    r = '-'
+                    r = ''
                     logs.append('Duplo preenchimento, ' +
                                 'questao ' + str(q) + '\n')
 
         if find_answer:
             lecture[q] = r
         else:
-            lecture[q] = '-'
+            lecture[q] = ''
             logs.append('Questao ' + str(q) + ' em branco\n')
 
     return [lecture, logs]

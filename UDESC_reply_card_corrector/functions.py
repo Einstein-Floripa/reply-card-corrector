@@ -182,7 +182,12 @@ def find_squares(img):
 
     # The params passed to find_binary_mask on this case can be ajusted
     # according to the printing
-    mask = find_binary_mask(img, [0, 0, 0], [180, 180, 180])
+    mask = find_binary_mask(img, [0, 0, 0], [230, 230, 230])
+
+    kernel = cv.getStructuringElement(cv.MORPH_RECT, (3, 3))
+    mask = cv.dilate(mask, kernel)
+    mask = cv.erode(mask, kernel)
+
     _, contours, hierarchy = cv.findContours(mask,
                                              cv.RETR_TREE,
                                              cv.CHAIN_APPROX_SIMPLE)
@@ -196,7 +201,7 @@ def find_squares(img):
         area = cv.contourArea(cnt)
         # Check if have 4 points in the contour, to be a square-like form
         # and already filtrate the smaller areas
-        if len(cnt) == 4 and cv.contourArea(cnt) > 100:
+        if len(cnt) == 4 and cv.contourArea(cnt) > 50:
             four_pts_cnts.append(cnt)
 
     top_left_cnts = list()
@@ -215,10 +220,10 @@ def find_squares(img):
         # Arbitrary division of the page. Just separate all square-like
         # contours in four groups based on their most internal  points,
         # the ones in top_left region, top_right, etc
-        if rect[2][0] < width/6 and rect[2][1] < height/11:
+        if rect[2][0] < width/6 and rect[2][1] < height/10:
             top_left_cnts.append(cnt)
 
-        elif rect[3][0] > width*5/6 and rect[3][1] < height/11:
+        elif rect[3][0] > width*5/6 and rect[3][1] < height/10:
             top_right_cnts.append(cnt)
 
         elif rect[0][0] > width*5/6 and rect[0][1] > height*9/10:
@@ -347,26 +352,26 @@ def get_response_pos():
         to be adjusted for every reply-card format
 
     """
-    # ENEM_format size (1017, 1401)
-    x_dis_border_1A = 80
-    y_dis_border_1A = 617
+    # UDESC dimensions (1017, 1401)
+    x_dis_border_1A = 125
+    y_dis_border_1A = 625
 
-    x_dis_between_item_inside_box = 29
+    x_dis_between_item_inside_box = 41
     y_dis_between_question_inside_box = 24
 
-    x_dis_between_item_another_box = 190
-    y_dis_between_item_another_box = 338
+    x_dis_between_item_another_box = 325
+    y_dis_between_item_another_box = 315
 
     positions = dict()
 
     # One question per box
     #  _______________________
-    # |Box 0 |  ...  | Box 4 |
+    # | Box 0 | Box 1 | Box 2 |
     # |_______|_______|_______|
-    # |Box 6  | ... | Box 8 |
-    # |_______|_____|_______|
+    # |Box 3  | Box 4 |
+    # |_______|_______|
 
-    for box in range(9):
+    for box in range(5):
         for q in range(10):
             question = list()
             q_number = 'q' + str(box*10 + q + 1).zfill(2)
@@ -374,10 +379,10 @@ def get_response_pos():
             for item in range(5):
                 x = int(x_dis_border_1A +
                         x_dis_between_item_inside_box * item +
-                        x_dis_between_item_another_box * (box % 5))
+                        x_dis_between_item_another_box * (box % 3))
                 y = int(y_dis_border_1A +
                         y_dis_between_question_inside_box * q +
-                        y_dis_between_item_another_box * (box > 4))
+                        y_dis_between_item_another_box * (box > 2))
 
                 question.append(Point(x=x, y=y))
 
@@ -551,7 +556,7 @@ def export_to(responses, cpf, filename, headers, day):
 
 
 if __name__ == '__main__':
-    app_folder = 'ENEM_reply_card_corrector/'
+    app_folder = 'UDESC_reply_card_corrector/'
     failures_path = app_folder + 'results/failures/'
     successes_path = app_folder + 'results/successes/'
     samples_path = app_folder + 'scans/'
@@ -561,3 +566,48 @@ if __name__ == '__main__':
     headers = ['cpf', *list(get_response_pos().keys()), 'day']
 
     filenames = [i for i in samples if "scan" in i]
+
+    for filename in filenames:
+        scanned = cv.imread(samples_path + filename)
+
+        scanned = correct_image_angle(scanned)
+
+        squares = find_squares(scanned)
+
+        warped = adjust_to_squares(squares, scanned)
+
+        responses_positions = get_response_pos()
+        responses, logs_ans = read_response(warped, responses_positions)
+
+        cpf_positions = get_cpf_pos()
+        cpf, logs_cpf = read_cpf(warped, cpf_positions)
+
+        day = check_day(warped)
+
+        # draw squares on the points to verify possible errors
+        for key in cpf_positions:
+            for pt in cpf_positions[key]:
+                cv.rectangle(warped,
+                             (pt.x - 1, pt.y - 1),
+                             (pt.x + 1,  pt.y + 1),
+                             (0, 0, 255))
+
+        for q in responses_positions:
+            for pt in responses_positions[q]:
+                cv.rectangle(warped,
+                             (pt.x - 1, pt.y - 1),
+                             (pt.x + 1,  pt.y + 1),
+                             (0, 0, 255))
+
+        pos_1 = Point(x=873, y=336)
+        pos_2 = Point(x=873, y=361)
+
+        cv.rectangle(warped,
+                     (pos_1.x-1, pos_1.y-1),
+                     (pos_1.x+1, pos_1.y+1),
+                     (0, 0, 255))
+        cv.rectangle(warped,
+                     (pos_2.x-1, pos_2.y-1),
+                     (pos_2.x+1, pos_2.y+1),
+                     (0, 0, 255))
+        show_img(warped)

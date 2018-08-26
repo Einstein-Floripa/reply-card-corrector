@@ -69,19 +69,19 @@ def read_response(warp, response_pos):
                     double_ten = True
 
         if double_ten:
-            value = '-'
+            value = ''
             logs.append('Duplo preenchimento dezena: ' + question)
 
         if double_unit:
-            value = '-'
+            value = ''
             logs.append('Duplo preenchimento unidade: ' + question)
 
         if not find_unit:
-            value = '-'
+            value = ''
             logs.append('Sem preenchimento unidade: ' + question)
 
         if not find_ten:
-            value = '-'
+            value = ''
             logs.append('Sem preenchimento dezena: ' + question)
 
         lecture[question] = value

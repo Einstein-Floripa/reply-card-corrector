@@ -26,17 +26,17 @@
      borderopacity="1.0"
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
-     inkscape:zoom="0.36841064"
-     inkscape:cx="86.359152"
-     inkscape:cy="481.09491"
+     inkscape:zoom="8.3361812"
+     inkscape:cx="642.91104"
+     inkscape:cy="830.69073"
      inkscape:document-units="mm"
      inkscape:current-layer="layer1"
      showgrid="false"
-     inkscape:window-width="1366"
-     inkscape:window-height="725"
+     inkscape:window-width="1364"
+     inkscape:window-height="747"
      inkscape:window-x="0"
-     inkscape:window-y="339"
-     inkscape:window-maximized="1"
+     inkscape:window-y="0"
+     inkscape:window-maximized="0"
      inkscape:snap-text-baseline="false" />
   <metadata
      id="metadata5">
@@ -46,7 +46,7 @@
         <dc:format>image/svg+xml</dc:format>
         <dc:type
            rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
-        <dc:title />
+        <dc:title></dc:title>
       </cc:Work>
     </rdf:RDF>
   </metadata>
@@ -569,135 +569,141 @@
          y="64.10006">CPF:</tspan></text>
     <g
        id="g2515"
-       transform="translate(-0.11149139,-13.500001)">
+       transform="translate(-0.11149139,-13.500001)"
+       style="stroke:#000000;stroke-opacity:1">
       <circle
          r="1.953887"
          cy="76"
          cx="38"
          id="path1027-8-8-1-8-2-36"
-         style="opacity:1;fill:none;fill-opacity:1;stroke:#000000;stroke-width:0.09222597;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
+         style="opacity:1;fill:none;fill-opacity:1;stroke:#000000;stroke-width:0.192;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
     </g>
     <g
        id="g2512"
        transform="translate(-0.11149139,-13.500001)"
        style="fill:#000000;fill-opacity:0.39607843" />
-    <g
-       transform="translate(-0.11149139,-8.9999994)"
-       id="g2515-3">
-      <circle
-         r="1.953887"
-         cy="76"
-         cx="38"
-         id="path1027-8-8-1-8-2-36-1"
-         style="opacity:1;fill:none;fill-opacity:1;stroke:#000000;stroke-width:0.09222597;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
-    </g>
+    <circle
+       style="opacity:1;fill:none;fill-opacity:1;stroke:#000000;stroke-width:0.192;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       id="path1027-8-8-1-8-2-36-1"
+       cx="37.888508"
+       cy="67"
+       r="1.953887" />
     <g
        transform="translate(-0.11149139,-8.9999994)"
        id="g2512-7" />
     <g
        transform="translate(-0.11149139,-4.5000004)"
-       id="g2515-3-6">
+       id="g2515-3-6"
+       style="stroke:#000000;stroke-opacity:1">
       <circle
          r="1.953887"
          cy="76"
          cx="38"
          id="path1027-8-8-1-8-2-36-1-2"
-         style="opacity:1;fill:none;fill-opacity:1;stroke:#000000;stroke-width:0.09222597;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
+         style="opacity:1;fill:none;fill-opacity:1;stroke:#000000;stroke-width:0.192;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
     </g>
     <g
        transform="translate(-0.11149139,-4.5000004)"
        id="g2512-7-1" />
     <g
        transform="translate(-0.11149139,-1.3501976e-6)"
-       id="g2515-3-5">
+       id="g2515-3-5"
+       style="stroke:#000000;stroke-opacity:1">
       <circle
          r="1.953887"
          cy="76"
          cx="38"
          id="path1027-8-8-1-8-2-36-1-7"
-         style="opacity:1;fill:none;fill-opacity:1;stroke:#000000;stroke-width:0.09222597;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
+         style="opacity:1;fill:none;fill-opacity:1;stroke:#000000;stroke-width:0.192;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
     </g>
     <g
        transform="translate(-0.11149139,-1.3501976e-6)"
        id="g2512-7-4" />
     <g
        transform="translate(-0.11149139,4.4999996)"
-       id="g2515-3-6-9">
+       id="g2515-3-6-9"
+       style="stroke:#000000;stroke-opacity:1">
       <circle
          r="1.953887"
          cy="76"
          cx="38"
          id="path1027-8-8-1-8-2-36-1-2-7"
-         style="opacity:1;fill:none;fill-opacity:1;stroke:#000000;stroke-width:0.09222597;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
+         style="opacity:1;fill:none;fill-opacity:1;stroke:#000000;stroke-width:0.192;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
     </g>
     <g
        transform="translate(-0.11149139,4.4999996)"
        id="g2512-7-1-5" />
     <g
        id="g2515-8"
-       transform="translate(-0.11149139,9.0000016)">
+       transform="translate(-0.11149139,9.0000016)"
+       style="stroke:#000000;stroke-opacity:1">
       <circle
          r="1.953887"
          cy="76"
          cx="38"
          id="path1027-8-8-1-8-2-36-3"
-         style="opacity:1;fill:none;fill-opacity:1;stroke:#000000;stroke-width:0.09222597;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
+         style="opacity:1;fill:none;fill-opacity:1;stroke:#000000;stroke-width:0.192;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
     </g>
     <g
        id="g2512-1"
        transform="translate(-0.11149139,9.0000016)" />
     <g
        transform="translate(-0.11149139,13.500001)"
-       id="g2515-3-4">
+       id="g2515-3-4"
+       style="stroke:#000000;stroke-opacity:1">
       <circle
          r="1.953887"
          cy="76"
          cx="38"
          id="path1027-8-8-1-8-2-36-1-3"
-         style="opacity:1;fill:none;fill-opacity:1;stroke:#000000;stroke-width:0.09222597;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
+         style="opacity:1;fill:none;fill-opacity:1;stroke:#000000;stroke-width:0.192;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
     </g>
     <g
        transform="translate(-0.11149139,13.500001)"
        id="g2512-7-3" />
     <g
        transform="translate(-0.11149139,18.000002)"
-       id="g2515-3-6-0">
+       id="g2515-3-6-0"
+       style="stroke:#000000;stroke-opacity:1">
       <circle
          r="1.953887"
          cy="76"
          cx="38"
          id="path1027-8-8-1-8-2-36-1-2-4"
-         style="opacity:1;fill:none;fill-opacity:1;stroke:#000000;stroke-width:0.09222597;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
+         style="opacity:1;fill:none;fill-opacity:1;stroke:#000000;stroke-width:0.192;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
     </g>
     <g
        transform="translate(-0.11149139,22.500001)"
-       id="g2515-3-5-7">
+       id="g2515-3-5-7"
+       style="stroke:#000000;stroke-opacity:1">
       <circle
          r="1.953887"
          cy="76"
          cx="38"
          id="path1027-8-8-1-8-2-36-1-7-7"
-         style="opacity:1;fill:none;fill-opacity:1;stroke:#000000;stroke-width:0.09222597;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
+         style="opacity:1;fill:none;fill-opacity:1;stroke:#000000;stroke-width:0.192;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
     </g>
     <g
        transform="translate(-0.11149139,27)"
-       id="g2515-3-6-9-0">
+       id="g2515-3-6-9-0"
+       style="stroke:#000000;stroke-opacity:1">
       <circle
          r="1.953887"
          cy="76"
          cx="38"
          id="path1027-8-8-1-8-2-36-1-2-7-3"
-         style="opacity:1;fill:none;fill-opacity:1;stroke:#000000;stroke-width:0.09222597;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
+         style="opacity:1;fill:none;fill-opacity:1;stroke:#000000;stroke-width:0.192;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
     </g>
     <g
        id="g2515-1"
-       transform="translate(4.3885086,-13.500001)">
+       transform="translate(4.3885086,-13.500001)"
+       style="stroke:#000000;stroke-opacity:0.50248754">
       <circle
          r="1.953887"
          cy="76"
          cx="38"
          id="path1027-8-8-1-8-2-36-5"
-         style="opacity:1;fill:none;fill-opacity:1;stroke:#000000;stroke-width:0.09222597;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
+         style="opacity:1;fill:none;fill-opacity:1;stroke:#000000;stroke-width:0.192;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:0.50248754" />
     </g>
     <g
        id="g2512-0"
@@ -705,1180 +711,1277 @@
        style="fill:#000000;fill-opacity:0.39607843" />
     <g
        transform="translate(4.3885086,-9.0000024)"
-       id="g2515-3-40">
+       id="g2515-3-40"
+       style="stroke:#000000;stroke-opacity:0.50248754">
       <circle
          r="1.953887"
          cy="76"
          cx="38"
          id="path1027-8-8-1-8-2-36-1-1"
-         style="opacity:1;fill:none;fill-opacity:1;stroke:#000000;stroke-width:0.09222597;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
+         style="opacity:1;fill:none;fill-opacity:1;stroke:#000000;stroke-width:0.192;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:0.50248754" />
     </g>
     <g
        transform="translate(4.3885086,-9.0000024)"
        id="g2512-7-37" />
     <g
        transform="translate(4.3885086,-4.5000034)"
-       id="g2515-3-6-1">
+       id="g2515-3-6-1"
+       style="stroke:#000000;stroke-opacity:0.50248754">
       <circle
          r="1.953887"
          cy="76"
          cx="38"
          id="path1027-8-8-1-8-2-36-1-2-3"
-         style="opacity:1;fill:none;fill-opacity:1;stroke:#000000;stroke-width:0.09222597;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
+         style="opacity:1;fill:none;fill-opacity:1;stroke:#000000;stroke-width:0.192;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:0.50248754" />
     </g>
     <g
        transform="translate(4.3885086,-4.5000034)"
        id="g2512-7-1-0" />
     <g
        transform="translate(4.3885086,-1.3501976e-6)"
-       id="g2515-3-5-75">
+       id="g2515-3-5-75"
+       style="stroke:#000000;stroke-opacity:0.50248754">
       <circle
          r="1.953887"
          cy="76"
          cx="38"
          id="path1027-8-8-1-8-2-36-1-7-6"
-         style="opacity:1;fill:none;fill-opacity:1;stroke:#000000;stroke-width:0.09222597;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
+         style="opacity:1;fill:none;fill-opacity:1;stroke:#000000;stroke-width:0.192;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:0.50248754" />
     </g>
     <g
        transform="translate(4.3885086,-1.3501976e-6)"
        id="g2512-7-4-5" />
     <g
        transform="translate(4.3885086,4.4999976)"
-       id="g2515-3-6-9-1">
+       id="g2515-3-6-9-1"
+       style="stroke:#000000;stroke-opacity:0.50248754">
       <circle
          r="1.953887"
          cy="76"
          cx="38"
          id="path1027-8-8-1-8-2-36-1-2-7-7"
-         style="opacity:1;fill:none;fill-opacity:1;stroke:#000000;stroke-width:0.09222597;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
+         style="opacity:1;fill:none;fill-opacity:1;stroke:#000000;stroke-width:0.192;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:0.50248754" />
     </g>
     <g
        transform="translate(4.3885086,4.4999976)"
        id="g2512-7-1-5-2" />
     <g
        id="g2515-8-6"
-       transform="translate(4.3885086,8.9999986)">
+       transform="translate(4.3885086,8.9999986)"
+       style="stroke:#000000;stroke-opacity:0.50248754">
       <circle
          r="1.953887"
          cy="76"
          cx="38"
          id="path1027-8-8-1-8-2-36-3-5"
-         style="opacity:1;fill:none;fill-opacity:1;stroke:#000000;stroke-width:0.09222597;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
+         style="opacity:1;fill:none;fill-opacity:1;stroke:#000000;stroke-width:0.192;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:0.50248754" />
     </g>
     <g
        id="g2512-1-7"
        transform="translate(4.3885086,8.9999986)" />
     <g
        transform="translate(4.3885086,13.499998)"
-       id="g2515-3-4-9">
+       id="g2515-3-4-9"
+       style="stroke:#000000;stroke-opacity:0.50248754">
       <circle
          r="1.953887"
          cy="76"
          cx="38"
          id="path1027-8-8-1-8-2-36-1-3-2"
-         style="opacity:1;fill:none;fill-opacity:1;stroke:#000000;stroke-width:0.09222597;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
+         style="opacity:1;fill:none;fill-opacity:1;stroke:#000000;stroke-width:0.192;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:0.50248754" />
     </g>
     <g
        transform="translate(4.3885086,13.499998)"
        id="g2512-7-3-7" />
     <g
        transform="translate(4.3885086,18.000002)"
-       id="g2515-3-6-0-4">
+       id="g2515-3-6-0-4"
+       style="stroke:#000000;stroke-opacity:0.50248754">
       <circle
          r="1.953887"
          cy="76"
          cx="38"
          id="path1027-8-8-1-8-2-36-1-2-4-7"
-         style="opacity:1;fill:none;fill-opacity:1;stroke:#000000;stroke-width:0.09222597;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
+         style="opacity:1;fill:none;fill-opacity:1;stroke:#000000;stroke-width:0.192;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:0.50248754" />
     </g>
     <g
        transform="translate(4.3885086,22.500001)"
-       id="g2515-3-5-7-2">
+       id="g2515-3-5-7-2"
+       style="stroke:#000000;stroke-opacity:0.50248754">
       <circle
          r="1.953887"
          cy="76"
          cx="38"
          id="path1027-8-8-1-8-2-36-1-7-7-1"
-         style="opacity:1;fill:none;fill-opacity:1;stroke:#000000;stroke-width:0.09222597;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
+         style="opacity:1;fill:none;fill-opacity:1;stroke:#000000;stroke-width:0.192;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:0.50248754" />
     </g>
     <g
        transform="translate(4.3885086,27)"
-       id="g2515-3-6-9-0-2">
+       id="g2515-3-6-9-0-2"
+       style="stroke:#000000;stroke-opacity:0.50248754">
       <circle
          r="1.953887"
          cy="76"
          cx="38"
          id="path1027-8-8-1-8-2-36-1-2-7-3-1"
-         style="opacity:1;fill:none;fill-opacity:1;stroke:#000000;stroke-width:0.09222597;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
+         style="opacity:1;fill:none;fill-opacity:1;stroke:#000000;stroke-width:0.192;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:0.50248754" />
     </g>
     <g
        id="g2515-0"
-       transform="translate(8.8885086,-13.500001)">
+       transform="translate(8.8885086,-13.500001)"
+       style="stroke:#000000;stroke-opacity:1">
       <circle
          r="1.953887"
          cy="76"
          cx="38"
          id="path1027-8-8-1-8-2-36-0"
-         style="opacity:1;fill:none;fill-opacity:1;stroke:#000000;stroke-width:0.09222597;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
+         style="opacity:1;fill:none;fill-opacity:1;stroke:#000000;stroke-width:0.192;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
     </g>
     <g
        id="g2512-3"
        transform="translate(8.8885086,-13.500001)" />
     <g
        transform="translate(8.8885086,-9.0000024)"
-       id="g2515-3-60">
+       id="g2515-3-60"
+       style="stroke:#000000;stroke-opacity:1">
       <circle
          r="1.953887"
          cy="76"
          cx="38"
          id="path1027-8-8-1-8-2-36-1-25"
-         style="opacity:1;fill:none;fill-opacity:1;stroke:#000000;stroke-width:0.09222597;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
+         style="opacity:1;fill:none;fill-opacity:1;stroke:#000000;stroke-width:0.192;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
     </g>
     <g
        transform="translate(8.8885086,-9.0000024)"
        id="g2512-7-8" />
     <g
        transform="translate(8.8885086,-4.5000034)"
-       id="g2515-3-6-06">
+       id="g2515-3-6-06"
+       style="stroke:#000000;stroke-opacity:1">
       <circle
          r="1.953887"
          cy="76"
          cx="38"
          id="path1027-8-8-1-8-2-36-1-2-0"
-         style="opacity:1;fill:none;fill-opacity:1;stroke:#000000;stroke-width:0.09222597;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
+         style="opacity:1;fill:none;fill-opacity:1;stroke:#000000;stroke-width:0.192;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
     </g>
     <g
        transform="translate(8.8885086,-4.5000034)"
        id="g2512-7-1-83" />
     <g
        transform="translate(8.8885086,-1.3501976e-6)"
-       id="g2515-3-5-1">
+       id="g2515-3-5-1"
+       style="stroke:#000000;stroke-opacity:1">
       <circle
          r="1.953887"
          cy="76"
          cx="38"
          id="path1027-8-8-1-8-2-36-1-7-0"
-         style="opacity:1;fill:none;fill-opacity:1;stroke:#000000;stroke-width:0.09222597;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
+         style="opacity:1;fill:none;fill-opacity:1;stroke:#000000;stroke-width:0.192;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
     </g>
     <g
        transform="translate(8.8885086,-1.3501976e-6)"
        id="g2512-7-4-58" />
     <g
        transform="translate(8.8885086,4.4999976)"
-       id="g2515-3-6-9-07">
+       id="g2515-3-6-9-07"
+       style="stroke:#000000;stroke-opacity:1">
       <circle
          r="1.953887"
          cy="76"
          cx="38"
          id="path1027-8-8-1-8-2-36-1-2-7-38"
-         style="opacity:1;fill:none;fill-opacity:1;stroke:#000000;stroke-width:0.09222597;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
+         style="opacity:1;fill:none;fill-opacity:1;stroke:#000000;stroke-width:0.192;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
     </g>
     <g
        transform="translate(8.8885086,4.4999976)"
        id="g2512-7-1-5-23" />
     <g
        id="g2515-8-7"
-       transform="translate(8.8885086,8.9999986)">
+       transform="translate(8.8885086,8.9999986)"
+       style="stroke:#000000;stroke-opacity:1">
       <circle
          r="1.953887"
          cy="76"
          cx="38"
          id="path1027-8-8-1-8-2-36-3-7"
-         style="opacity:1;fill:none;fill-opacity:1;stroke:#000000;stroke-width:0.09222597;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
+         style="opacity:1;fill:none;fill-opacity:1;stroke:#000000;stroke-width:0.192;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
     </g>
     <g
        id="g2512-1-6"
        transform="translate(8.8885086,8.9999986)" />
     <g
        transform="translate(8.8885086,13.499998)"
-       id="g2515-3-4-1">
+       id="g2515-3-4-1"
+       style="stroke:#000000;stroke-opacity:1">
       <circle
          r="1.953887"
          cy="76"
          cx="38"
          id="path1027-8-8-1-8-2-36-1-3-9"
-         style="opacity:1;fill:none;fill-opacity:1;stroke:#000000;stroke-width:0.09222597;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
+         style="opacity:1;fill:none;fill-opacity:1;stroke:#000000;stroke-width:0.192;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
     </g>
     <g
        transform="translate(8.8885086,13.499998)"
        id="g2512-7-3-0" />
     <g
        transform="translate(8.8885086,18.000002)"
-       id="g2515-3-6-0-8">
+       id="g2515-3-6-0-8"
+       style="stroke:#000000;stroke-opacity:1">
       <circle
          r="1.953887"
          cy="76"
          cx="38"
          id="path1027-8-8-1-8-2-36-1-2-4-8"
-         style="opacity:1;fill:none;fill-opacity:1;stroke:#000000;stroke-width:0.09222597;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
+         style="opacity:1;fill:none;fill-opacity:1;stroke:#000000;stroke-width:0.192;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
     </g>
     <g
        transform="translate(8.8885086,22.500001)"
-       id="g2515-3-5-7-0">
+       id="g2515-3-5-7-0"
+       style="stroke:#000000;stroke-opacity:1">
       <circle
          r="1.953887"
          cy="76"
          cx="38"
          id="path1027-8-8-1-8-2-36-1-7-7-6"
-         style="opacity:1;fill:none;fill-opacity:1;stroke:#000000;stroke-width:0.09222597;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
+         style="opacity:1;fill:none;fill-opacity:1;stroke:#000000;stroke-width:0.192;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
     </g>
     <g
        transform="translate(8.8885086,27)"
-       id="g2515-3-6-9-0-7">
+       id="g2515-3-6-9-0-7"
+       style="stroke:#000000;stroke-opacity:1">
       <circle
          r="1.953887"
          cy="76"
          cx="38"
          id="path1027-8-8-1-8-2-36-1-2-7-3-7"
-         style="opacity:1;fill:none;fill-opacity:1;stroke:#000000;stroke-width:0.09222597;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
+         style="opacity:1;fill:none;fill-opacity:1;stroke:#000000;stroke-width:0.192;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
     </g>
     <g
        id="g2515-2"
-       transform="translate(17.888509,-13.500001)">
+       transform="translate(17.888509,-13.500001)"
+       style="stroke:#000000;stroke-opacity:1">
       <circle
          r="1.953887"
          cy="76"
          cx="38"
          id="path1027-8-8-1-8-2-36-7"
-         style="opacity:1;fill:none;fill-opacity:1;stroke:#000000;stroke-width:0.09222597;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
+         style="opacity:1;fill:none;fill-opacity:1;stroke:#000000;stroke-width:0.192;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
     </g>
     <g
        id="g2512-15"
        transform="translate(17.888509,-13.500001)" />
     <g
        transform="translate(17.888509,-9.0000024)"
-       id="g2515-3-56">
+       id="g2515-3-56"
+       style="stroke:#000000;stroke-opacity:1">
       <circle
          r="1.953887"
          cy="76"
          cx="38"
          id="path1027-8-8-1-8-2-36-1-5"
-         style="opacity:1;fill:none;fill-opacity:1;stroke:#000000;stroke-width:0.09222597;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
+         style="opacity:1;fill:none;fill-opacity:1;stroke:#000000;stroke-width:0.192;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
     </g>
     <g
        transform="translate(17.888509,-9.0000024)"
        id="g2512-7-6" />
     <g
        transform="translate(17.888509,-4.5000034)"
-       id="g2515-3-6-8">
+       id="g2515-3-6-8"
+       style="stroke:#000000;stroke-opacity:1">
       <circle
          r="1.953887"
          cy="76"
          cx="38"
          id="path1027-8-8-1-8-2-36-1-2-8"
-         style="opacity:1;fill:none;fill-opacity:1;stroke:#000000;stroke-width:0.09222597;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
+         style="opacity:1;fill:none;fill-opacity:1;stroke:#000000;stroke-width:0.192;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
     </g>
     <g
        transform="translate(17.888509,-4.5000034)"
        id="g2512-7-1-3" />
     <g
        transform="translate(17.888509,-1.3501976e-6)"
-       id="g2515-3-5-2">
+       id="g2515-3-5-2"
+       style="stroke:#000000;stroke-opacity:1">
       <circle
          r="1.953887"
          cy="76"
          cx="38"
          id="path1027-8-8-1-8-2-36-1-7-4"
-         style="opacity:1;fill:none;fill-opacity:1;stroke:#000000;stroke-width:0.09222597;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
+         style="opacity:1;fill:none;fill-opacity:1;stroke:#000000;stroke-width:0.192;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
     </g>
     <g
        transform="translate(17.888509,-1.3501976e-6)"
        id="g2512-7-4-50" />
     <g
        transform="translate(17.888509,4.4999996)"
-       id="g2515-3-6-9-7">
+       id="g2515-3-6-9-7"
+       style="stroke:#000000;stroke-opacity:1">
       <circle
          r="1.953887"
          cy="76"
          cx="38"
          id="path1027-8-8-1-8-2-36-1-2-7-2"
-         style="opacity:1;fill:none;fill-opacity:1;stroke:#000000;stroke-width:0.09222597;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
+         style="opacity:1;fill:none;fill-opacity:1;stroke:#000000;stroke-width:0.192;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
     </g>
     <g
        transform="translate(17.888509,4.4999996)"
        id="g2512-7-1-5-1" />
     <g
        id="g2515-8-9"
-       transform="translate(17.888509,8.9999986)">
+       transform="translate(17.888509,8.9999986)"
+       style="stroke:#000000;stroke-opacity:1">
       <circle
          r="1.953887"
          cy="76"
          cx="38"
          id="path1027-8-8-1-8-2-36-3-4"
-         style="opacity:1;fill:none;fill-opacity:1;stroke:#000000;stroke-width:0.09222597;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
+         style="opacity:1;fill:none;fill-opacity:1;stroke:#000000;stroke-width:0.192;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
     </g>
     <g
        id="g2512-1-1"
        transform="translate(17.888509,8.9999986)" />
     <g
        transform="translate(17.888509,13.499998)"
-       id="g2515-3-4-4">
+       id="g2515-3-4-4"
+       style="stroke:#000000;stroke-opacity:1">
       <circle
          r="1.953887"
          cy="76"
          cx="38"
          id="path1027-8-8-1-8-2-36-1-3-1"
-         style="opacity:1;fill:none;fill-opacity:1;stroke:#000000;stroke-width:0.09222597;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
+         style="opacity:1;fill:none;fill-opacity:1;stroke:#000000;stroke-width:0.192;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
     </g>
     <g
        transform="translate(17.888509,13.499998)"
        id="g2512-7-3-2" />
     <g
        transform="translate(17.888509,18.000002)"
-       id="g2515-3-6-0-6">
+       id="g2515-3-6-0-6"
+       style="stroke:#000000;stroke-opacity:1">
       <circle
          r="1.953887"
          cy="76"
          cx="38"
          id="path1027-8-8-1-8-2-36-1-2-4-2"
-         style="opacity:1;fill:none;fill-opacity:1;stroke:#000000;stroke-width:0.09222597;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
+         style="opacity:1;fill:none;fill-opacity:1;stroke:#000000;stroke-width:0.192;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
     </g>
     <g
        transform="translate(17.888509,22.500001)"
-       id="g2515-3-5-7-7">
+       id="g2515-3-5-7-7"
+       style="stroke:#000000;stroke-opacity:1">
       <circle
          r="1.953887"
          cy="76"
          cx="38"
          id="path1027-8-8-1-8-2-36-1-7-7-4"
-         style="opacity:1;fill:none;fill-opacity:1;stroke:#000000;stroke-width:0.09222597;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
+         style="opacity:1;fill:none;fill-opacity:1;stroke:#000000;stroke-width:0.192;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
     </g>
     <g
        transform="translate(17.888509,27)"
-       id="g2515-3-6-9-0-1">
+       id="g2515-3-6-9-0-1"
+       style="stroke:#000000;stroke-opacity:1">
       <circle
          r="1.953887"
          cy="76"
          cx="38"
          id="path1027-8-8-1-8-2-36-1-2-7-3-4"
-         style="opacity:1;fill:none;fill-opacity:1;stroke:#000000;stroke-width:0.09222597;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
+         style="opacity:1;fill:none;fill-opacity:1;stroke:#000000;stroke-width:0.192;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
     </g>
     <g
        id="g2515-1-2"
-       transform="translate(22.388508,-13.500001)">
+       transform="translate(22.388508,-13.500001)"
+       style="stroke:#000000;stroke-opacity:0.50248754">
       <circle
          r="1.953887"
          cy="76"
          cx="38"
          id="path1027-8-8-1-8-2-36-5-7"
-         style="opacity:1;fill:none;fill-opacity:1;stroke:#000000;stroke-width:0.09222597;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
+         style="opacity:1;fill:none;fill-opacity:1;stroke:#000000;stroke-width:0.192;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:0.50248754" />
     </g>
     <g
        id="g2512-0-7"
        transform="translate(22.388508,-13.500001)" />
     <g
        transform="translate(22.388508,-9.0000024)"
-       id="g2515-3-40-1">
+       id="g2515-3-40-1"
+       style="stroke:#000000;stroke-opacity:0.50248754">
       <circle
          r="1.953887"
          cy="76"
          cx="38"
          id="path1027-8-8-1-8-2-36-1-1-0"
-         style="opacity:1;fill:none;fill-opacity:1;stroke:#000000;stroke-width:0.09222597;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
+         style="opacity:1;fill:none;fill-opacity:1;stroke:#000000;stroke-width:0.192;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:0.50248754" />
     </g>
     <g
        transform="translate(22.388508,-9.0000024)"
        id="g2512-7-37-7" />
     <g
        transform="translate(22.388508,-4.5000034)"
-       id="g2515-3-6-1-1">
+       id="g2515-3-6-1-1"
+       style="stroke:#000000;stroke-opacity:0.50248754">
       <circle
          r="1.953887"
          cy="76"
          cx="38"
          id="path1027-8-8-1-8-2-36-1-2-3-0"
-         style="opacity:1;fill:none;fill-opacity:1;stroke:#000000;stroke-width:0.09222597;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
+         style="opacity:1;fill:none;fill-opacity:1;stroke:#000000;stroke-width:0.192;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:0.50248754" />
     </g>
     <g
        transform="translate(22.388508,-4.5000034)"
        id="g2512-7-1-0-2" />
     <g
        transform="translate(22.388508,-1.3501976e-6)"
-       id="g2515-3-5-75-9">
+       id="g2515-3-5-75-9"
+       style="stroke:#000000;stroke-opacity:0.50248754">
       <circle
          r="1.953887"
          cy="76"
          cx="38"
          id="path1027-8-8-1-8-2-36-1-7-6-7"
-         style="opacity:1;fill:none;fill-opacity:1;stroke:#000000;stroke-width:0.09222597;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
+         style="opacity:1;fill:none;fill-opacity:1;stroke:#000000;stroke-width:0.192;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:0.50248754" />
     </g>
     <g
        transform="translate(22.388508,-1.3501976e-6)"
        id="g2512-7-4-5-1" />
     <g
        transform="translate(22.388508,4.4999976)"
-       id="g2515-3-6-9-1-2">
+       id="g2515-3-6-9-1-2"
+       style="stroke:#000000;stroke-opacity:0.50248754">
       <circle
          r="1.953887"
          cy="76"
          cx="38"
          id="path1027-8-8-1-8-2-36-1-2-7-7-0"
-         style="opacity:1;fill:none;fill-opacity:1;stroke:#000000;stroke-width:0.09222597;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
+         style="opacity:1;fill:none;fill-opacity:1;stroke:#000000;stroke-width:0.192;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:0.50248754" />
     </g>
     <g
        transform="translate(22.388508,4.4999976)"
        id="g2512-7-1-5-2-6" />
     <g
        id="g2515-8-6-4"
-       transform="translate(22.388508,8.9999986)">
+       transform="translate(22.388508,8.9999986)"
+       style="stroke:#000000;stroke-opacity:0.50248754">
       <circle
          r="1.953887"
          cy="76"
          cx="38"
          id="path1027-8-8-1-8-2-36-3-5-9"
-         style="opacity:1;fill:none;fill-opacity:1;stroke:#000000;stroke-width:0.09222597;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
+         style="opacity:1;fill:none;fill-opacity:1;stroke:#000000;stroke-width:0.192;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:0.50248754" />
     </g>
     <g
        id="g2512-1-7-2"
        transform="translate(22.388508,8.9999986)" />
     <g
        transform="translate(22.388508,13.499998)"
-       id="g2515-3-4-9-5">
+       id="g2515-3-4-9-5"
+       style="stroke:#000000;stroke-opacity:0.50248754">
       <circle
          r="1.953887"
          cy="76"
          cx="38"
          id="path1027-8-8-1-8-2-36-1-3-2-9"
-         style="opacity:1;fill:none;fill-opacity:1;stroke:#000000;stroke-width:0.09222597;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
+         style="opacity:1;fill:none;fill-opacity:1;stroke:#000000;stroke-width:0.192;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:0.50248754" />
     </g>
     <g
        transform="translate(22.388508,13.499998)"
        id="g2512-7-3-7-1" />
     <g
        transform="translate(22.388508,18.000002)"
-       id="g2515-3-6-0-4-9">
+       id="g2515-3-6-0-4-9"
+       style="stroke:#000000;stroke-opacity:0.50248754">
       <circle
          r="1.953887"
          cy="76"
          cx="38"
          id="path1027-8-8-1-8-2-36-1-2-4-7-6"
-         style="opacity:1;fill:none;fill-opacity:1;stroke:#000000;stroke-width:0.09222597;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
+         style="opacity:1;fill:none;fill-opacity:1;stroke:#000000;stroke-width:0.192;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:0.50248754" />
     </g>
     <g
        transform="translate(22.388508,22.500001)"
-       id="g2515-3-5-7-2-0">
+       id="g2515-3-5-7-2-0"
+       style="stroke:#000000;stroke-opacity:0.50248754">
       <circle
          r="1.953887"
          cy="76"
          cx="38"
          id="path1027-8-8-1-8-2-36-1-7-7-1-9"
-         style="opacity:1;fill:none;fill-opacity:1;stroke:#000000;stroke-width:0.09222597;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
+         style="opacity:1;fill:none;fill-opacity:1;stroke:#000000;stroke-width:0.192;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:0.50248754" />
     </g>
     <g
        transform="translate(22.388508,27)"
-       id="g2515-3-6-9-0-2-6">
+       id="g2515-3-6-9-0-2-6"
+       style="stroke:#000000;stroke-opacity:0.50248754">
       <circle
          r="1.953887"
          cy="76"
          cx="38"
          id="path1027-8-8-1-8-2-36-1-2-7-3-1-6"
-         style="opacity:1;fill:none;fill-opacity:1;stroke:#000000;stroke-width:0.09222597;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
+         style="opacity:1;fill:none;fill-opacity:1;stroke:#000000;stroke-width:0.192;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:0.50248754" />
     </g>
     <g
        id="g2515-0-5"
-       transform="translate(26.888505,-13.500001)">
+       transform="translate(26.888505,-13.500001)"
+       style="stroke:#000000;stroke-opacity:1">
       <circle
          r="1.953887"
          cy="76"
          cx="38"
          id="path1027-8-8-1-8-2-36-0-2"
-         style="opacity:1;fill:none;fill-opacity:1;stroke:#000000;stroke-width:0.09222597;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
+         style="opacity:1;fill:none;fill-opacity:1;stroke:#000000;stroke-width:0.192;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
     </g>
     <g
        id="g2512-3-1"
        transform="translate(26.888505,-13.500001)" />
     <g
        transform="translate(26.888505,-9.0000024)"
-       id="g2515-3-60-9">
+       id="g2515-3-60-9"
+       style="stroke:#000000;stroke-opacity:1">
       <circle
          r="1.953887"
          cy="76"
          cx="38"
          id="path1027-8-8-1-8-2-36-1-25-9"
-         style="opacity:1;fill:none;fill-opacity:1;stroke:#000000;stroke-width:0.09222597;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
+         style="opacity:1;fill:none;fill-opacity:1;stroke:#000000;stroke-width:0.192;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
     </g>
     <g
        transform="translate(26.888505,-9.0000024)"
        id="g2512-7-8-1" />
     <g
        transform="translate(26.888505,-4.5000034)"
-       id="g2515-3-6-06-5">
+       id="g2515-3-6-06-5"
+       style="stroke:#000000;stroke-opacity:1">
       <circle
          r="1.953887"
          cy="76"
          cx="38"
          id="path1027-8-8-1-8-2-36-1-2-0-8"
-         style="opacity:1;fill:none;fill-opacity:1;stroke:#000000;stroke-width:0.09222597;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
+         style="opacity:1;fill:none;fill-opacity:1;stroke:#000000;stroke-width:0.192;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
     </g>
     <g
        transform="translate(26.888505,-4.5000034)"
        id="g2512-7-1-83-5" />
     <g
        transform="translate(26.888505,-1.3501976e-6)"
-       id="g2515-3-5-1-3">
+       id="g2515-3-5-1-3"
+       style="stroke:#000000;stroke-opacity:1">
       <circle
          r="1.953887"
          cy="76"
          cx="38"
          id="path1027-8-8-1-8-2-36-1-7-0-8"
-         style="opacity:1;fill:none;fill-opacity:1;stroke:#000000;stroke-width:0.09222597;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
+         style="opacity:1;fill:none;fill-opacity:1;stroke:#000000;stroke-width:0.192;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
     </g>
     <g
        transform="translate(26.888505,-1.3501976e-6)"
        id="g2512-7-4-58-9" />
     <g
        transform="translate(26.888505,4.4999976)"
-       id="g2515-3-6-9-07-3">
+       id="g2515-3-6-9-07-3"
+       style="stroke:#000000;stroke-opacity:1">
       <circle
          r="1.953887"
          cy="76"
          cx="38"
          id="path1027-8-8-1-8-2-36-1-2-7-38-8"
-         style="opacity:1;fill:none;fill-opacity:1;stroke:#000000;stroke-width:0.09222597;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
+         style="opacity:1;fill:none;fill-opacity:1;stroke:#000000;stroke-width:0.192;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
     </g>
     <g
        transform="translate(26.888505,4.4999976)"
        id="g2512-7-1-5-23-6" />
     <g
        id="g2515-8-7-3"
-       transform="translate(26.888505,8.9999986)">
+       transform="translate(26.888505,8.9999986)"
+       style="stroke:#000000;stroke-opacity:1">
       <circle
          r="1.953887"
          cy="76"
          cx="38"
          id="path1027-8-8-1-8-2-36-3-7-6"
-         style="opacity:1;fill:none;fill-opacity:1;stroke:#000000;stroke-width:0.09222597;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
+         style="opacity:1;fill:none;fill-opacity:1;stroke:#000000;stroke-width:0.192;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
     </g>
     <g
        id="g2512-1-6-1"
        transform="translate(26.888505,8.9999986)" />
     <g
        transform="translate(26.888505,13.499998)"
-       id="g2515-3-4-1-0">
+       id="g2515-3-4-1-0"
+       style="stroke:#000000;stroke-opacity:1">
       <circle
          r="1.953887"
          cy="76"
          cx="38"
          id="path1027-8-8-1-8-2-36-1-3-9-5"
-         style="opacity:1;fill:none;fill-opacity:1;stroke:#000000;stroke-width:0.09222597;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
+         style="opacity:1;fill:none;fill-opacity:1;stroke:#000000;stroke-width:0.192;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
     </g>
     <g
        transform="translate(26.888505,13.499998)"
        id="g2512-7-3-0-1" />
     <g
        transform="translate(26.888505,18.000002)"
-       id="g2515-3-6-0-8-3">
+       id="g2515-3-6-0-8-3"
+       style="stroke:#000000;stroke-opacity:1">
       <circle
          r="1.953887"
          cy="76"
          cx="38"
          id="path1027-8-8-1-8-2-36-1-2-4-8-0"
-         style="opacity:1;fill:none;fill-opacity:1;stroke:#000000;stroke-width:0.09222597;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
+         style="opacity:1;fill:none;fill-opacity:1;stroke:#000000;stroke-width:0.192;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
     </g>
     <g
        transform="translate(26.888505,22.500001)"
-       id="g2515-3-5-7-0-4">
+       id="g2515-3-5-7-0-4"
+       style="stroke:#000000;stroke-opacity:1">
       <circle
          r="1.953887"
          cy="76"
          cx="38"
          id="path1027-8-8-1-8-2-36-1-7-7-6-2"
-         style="opacity:1;fill:none;fill-opacity:1;stroke:#000000;stroke-width:0.09222597;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
+         style="opacity:1;fill:none;fill-opacity:1;stroke:#000000;stroke-width:0.192;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
     </g>
     <g
        transform="translate(26.888505,27)"
-       id="g2515-3-6-9-0-7-9">
+       id="g2515-3-6-9-0-7-9"
+       style="stroke:#000000;stroke-opacity:1">
       <circle
          r="1.953887"
          cy="76"
          cx="38"
          id="path1027-8-8-1-8-2-36-1-2-7-3-7-4"
-         style="opacity:1;fill:none;fill-opacity:1;stroke:#000000;stroke-width:0.09222597;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
+         style="opacity:1;fill:none;fill-opacity:1;stroke:#000000;stroke-width:0.192;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
     </g>
     <g
        id="g2515-2-6"
-       transform="translate(36.888509,-13.500001)">
+       transform="translate(36.888509,-13.500001)"
+       style="stroke:#000000;stroke-opacity:1">
       <circle
          r="1.953887"
          cy="76"
          cx="38"
          id="path1027-8-8-1-8-2-36-7-3"
-         style="opacity:1;fill:none;fill-opacity:1;stroke:#000000;stroke-width:0.09222597;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
+         style="opacity:1;fill:none;fill-opacity:1;stroke:#000000;stroke-width:0.192;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
     </g>
     <g
        id="g2512-15-9"
        transform="translate(36.888509,-13.500001)" />
     <g
        transform="translate(36.888509,-9.0000024)"
-       id="g2515-3-56-4">
+       id="g2515-3-56-4"
+       style="stroke:#000000;stroke-opacity:1">
       <circle
          r="1.953887"
          cy="76"
          cx="38"
          id="path1027-8-8-1-8-2-36-1-5-6"
-         style="opacity:1;fill:none;fill-opacity:1;stroke:#000000;stroke-width:0.09222597;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
+         style="opacity:1;fill:none;fill-opacity:1;stroke:#000000;stroke-width:0.192;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
     </g>
     <g
        transform="translate(36.888509,-9.0000024)"
        id="g2512-7-6-1" />
     <g
        transform="translate(36.888509,-4.5000034)"
-       id="g2515-3-6-8-1">
+       id="g2515-3-6-8-1"
+       style="stroke:#000000;stroke-opacity:1">
       <circle
          r="1.953887"
          cy="76"
          cx="38"
          id="path1027-8-8-1-8-2-36-1-2-8-7"
-         style="opacity:1;fill:none;fill-opacity:1;stroke:#000000;stroke-width:0.09222597;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
+         style="opacity:1;fill:none;fill-opacity:1;stroke:#000000;stroke-width:0.192;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
     </g>
     <g
        transform="translate(36.888509,-4.5000034)"
        id="g2512-7-1-3-2" />
     <g
        transform="translate(36.888509,-1.3501976e-6)"
-       id="g2515-3-5-2-2">
+       id="g2515-3-5-2-2"
+       style="stroke:#000000;stroke-opacity:1">
       <circle
          r="1.953887"
          cy="76"
          cx="38"
          id="path1027-8-8-1-8-2-36-1-7-4-8"
-         style="opacity:1;fill:none;fill-opacity:1;stroke:#000000;stroke-width:0.09222597;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
+         style="opacity:1;fill:none;fill-opacity:1;stroke:#000000;stroke-width:0.192;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
     </g>
     <g
        transform="translate(36.888509,-1.3501976e-6)"
        id="g2512-7-4-50-1" />
     <g
        transform="translate(36.888509,4.4999996)"
-       id="g2515-3-6-9-7-7">
+       id="g2515-3-6-9-7-7"
+       style="stroke:#000000;stroke-opacity:1">
       <circle
          r="1.953887"
          cy="76"
          cx="38"
          id="path1027-8-8-1-8-2-36-1-2-7-2-8"
-         style="opacity:1;fill:none;fill-opacity:1;stroke:#000000;stroke-width:0.09222597;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
+         style="opacity:1;fill:none;fill-opacity:1;stroke:#000000;stroke-width:0.192;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
     </g>
     <g
        transform="translate(36.888509,4.4999996)"
        id="g2512-7-1-5-1-6" />
     <g
        id="g2515-8-9-7"
-       transform="translate(36.888509,8.9999986)">
+       transform="translate(36.888509,8.9999986)"
+       style="stroke:#000000;stroke-opacity:1">
       <circle
          r="1.953887"
          cy="76"
          cx="38"
          id="path1027-8-8-1-8-2-36-3-4-2"
-         style="opacity:1;fill:none;fill-opacity:1;stroke:#000000;stroke-width:0.09222597;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
+         style="opacity:1;fill:none;fill-opacity:1;stroke:#000000;stroke-width:0.192;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
     </g>
     <g
        id="g2512-1-1-3"
        transform="translate(36.888509,8.9999986)" />
     <g
        transform="translate(36.888509,13.499998)"
-       id="g2515-3-4-4-5">
+       id="g2515-3-4-4-5"
+       style="stroke:#000000;stroke-opacity:1">
       <circle
          r="1.953887"
          cy="76"
          cx="38"
          id="path1027-8-8-1-8-2-36-1-3-1-3"
-         style="opacity:1;fill:none;fill-opacity:1;stroke:#000000;stroke-width:0.09222597;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
+         style="opacity:1;fill:none;fill-opacity:1;stroke:#000000;stroke-width:0.192;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
     </g>
     <g
        transform="translate(36.888509,13.499998)"
        id="g2512-7-3-2-7" />
     <g
        transform="translate(36.888509,18.000002)"
-       id="g2515-3-6-0-6-1">
+       id="g2515-3-6-0-6-1"
+       style="stroke:#000000;stroke-opacity:1">
       <circle
          r="1.953887"
          cy="76"
          cx="38"
          id="path1027-8-8-1-8-2-36-1-2-4-2-3"
-         style="opacity:1;fill:none;fill-opacity:1;stroke:#000000;stroke-width:0.09222597;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
+         style="opacity:1;fill:none;fill-opacity:1;stroke:#000000;stroke-width:0.192;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
     </g>
     <g
        transform="translate(36.888509,22.500001)"
-       id="g2515-3-5-7-7-3">
+       id="g2515-3-5-7-7-3"
+       style="stroke:#000000;stroke-opacity:1">
       <circle
          r="1.953887"
          cy="76"
          cx="38"
          id="path1027-8-8-1-8-2-36-1-7-7-4-5"
-         style="opacity:1;fill:none;fill-opacity:1;stroke:#000000;stroke-width:0.09222597;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
+         style="opacity:1;fill:none;fill-opacity:1;stroke:#000000;stroke-width:0.192;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
     </g>
     <g
        transform="translate(36.888509,27)"
-       id="g2515-3-6-9-0-1-9">
+       id="g2515-3-6-9-0-1-9"
+       style="stroke:#000000;stroke-opacity:1">
       <circle
          r="1.953887"
          cy="76"
          cx="38"
          id="path1027-8-8-1-8-2-36-1-2-7-3-4-9"
-         style="opacity:1;fill:none;fill-opacity:1;stroke:#000000;stroke-width:0.09222597;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
+         style="opacity:1;fill:none;fill-opacity:1;stroke:#000000;stroke-width:0.192;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
     </g>
     <g
        id="g2515-1-2-4"
-       transform="translate(41.388508,-13.500001)">
+       transform="translate(41.388508,-13.500001)"
+       style="stroke:#000000;stroke-opacity:0.50248754">
       <circle
          r="1.953887"
          cy="76"
          cx="38"
          id="path1027-8-8-1-8-2-36-5-7-9"
-         style="opacity:1;fill:none;fill-opacity:1;stroke:#000000;stroke-width:0.09222597;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
+         style="opacity:1;fill:none;fill-opacity:1;stroke:#000000;stroke-width:0.192;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:0.50248754" />
     </g>
     <g
        id="g2512-0-7-0"
        transform="translate(41.388508,-13.500001)" />
     <g
        transform="translate(41.388508,-9.0000024)"
-       id="g2515-3-40-1-0">
+       id="g2515-3-40-1-0"
+       style="stroke:#000000;stroke-opacity:0.50248754">
       <circle
          r="1.953887"
          cy="76"
          cx="38"
          id="path1027-8-8-1-8-2-36-1-1-0-0"
-         style="opacity:1;fill:none;fill-opacity:1;stroke:#000000;stroke-width:0.09222597;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
+         style="opacity:1;fill:none;fill-opacity:1;stroke:#000000;stroke-width:0.192;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:0.50248754" />
     </g>
     <g
        transform="translate(41.388508,-9.0000024)"
        id="g2512-7-37-7-6" />
     <g
        transform="translate(41.388508,-4.5000034)"
-       id="g2515-3-6-1-1-0">
+       id="g2515-3-6-1-1-0"
+       style="stroke:#000000;stroke-opacity:0.50248754">
       <circle
          r="1.953887"
          cy="76"
          cx="38"
          id="path1027-8-8-1-8-2-36-1-2-3-0-8"
-         style="opacity:1;fill:none;fill-opacity:1;stroke:#000000;stroke-width:0.09222597;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
+         style="opacity:1;fill:none;fill-opacity:1;stroke:#000000;stroke-width:0.192;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:0.50248754" />
     </g>
     <g
        transform="translate(41.388508,-4.5000034)"
        id="g2512-7-1-0-2-3" />
     <g
        transform="translate(41.388508,-1.3501976e-6)"
-       id="g2515-3-5-75-9-3">
+       id="g2515-3-5-75-9-3"
+       style="stroke:#000000;stroke-opacity:0.50248754">
       <circle
          r="1.953887"
          cy="76"
          cx="38"
          id="path1027-8-8-1-8-2-36-1-7-6-7-1"
-         style="opacity:1;fill:none;fill-opacity:1;stroke:#000000;stroke-width:0.09222597;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
+         style="opacity:1;fill:none;fill-opacity:1;stroke:#000000;stroke-width:0.192;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:0.50248754" />
     </g>
     <g
        transform="translate(41.388508,-1.3501976e-6)"
        id="g2512-7-4-5-1-0" />
     <g
        transform="translate(41.388508,4.4999976)"
-       id="g2515-3-6-9-1-2-0">
+       id="g2515-3-6-9-1-2-0"
+       style="stroke:#000000;stroke-opacity:0.50248754">
       <circle
          r="1.953887"
          cy="76"
          cx="38"
          id="path1027-8-8-1-8-2-36-1-2-7-7-0-3"
-         style="opacity:1;fill:none;fill-opacity:1;stroke:#000000;stroke-width:0.09222597;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
+         style="opacity:1;fill:none;fill-opacity:1;stroke:#000000;stroke-width:0.192;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:0.50248754" />
     </g>
     <g
        transform="translate(41.388508,4.4999976)"
        id="g2512-7-1-5-2-6-1" />
     <g
        id="g2515-8-6-4-1"
-       transform="translate(41.388508,8.9999986)">
+       transform="translate(41.388508,8.9999986)"
+       style="stroke:#000000;stroke-opacity:0.50248754">
       <circle
          r="1.953887"
          cy="76"
          cx="38"
          id="path1027-8-8-1-8-2-36-3-5-9-7"
-         style="opacity:1;fill:none;fill-opacity:1;stroke:#000000;stroke-width:0.09222597;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
+         style="opacity:1;fill:none;fill-opacity:1;stroke:#000000;stroke-width:0.192;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:0.50248754" />
     </g>
     <g
        id="g2512-1-7-2-9"
        transform="translate(41.388508,8.9999986)" />
     <g
        transform="translate(41.388508,13.499998)"
-       id="g2515-3-4-9-5-3">
+       id="g2515-3-4-9-5-3"
+       style="stroke:#000000;stroke-opacity:0.50248754">
       <circle
          r="1.953887"
          cy="76"
          cx="38"
          id="path1027-8-8-1-8-2-36-1-3-2-9-5"
-         style="opacity:1;fill:none;fill-opacity:1;stroke:#000000;stroke-width:0.09222597;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
+         style="opacity:1;fill:none;fill-opacity:1;stroke:#000000;stroke-width:0.192;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:0.50248754" />
     </g>
     <g
        transform="translate(41.388508,13.499998)"
        id="g2512-7-3-7-1-9" />
     <g
        transform="translate(41.388508,18.000002)"
-       id="g2515-3-6-0-4-9-4">
+       id="g2515-3-6-0-4-9-4"
+       style="stroke:#000000;stroke-opacity:0.50248754">
       <circle
          r="1.953887"
          cy="76"
          cx="38"
          id="path1027-8-8-1-8-2-36-1-2-4-7-6-6"
-         style="opacity:1;fill:none;fill-opacity:1;stroke:#000000;stroke-width:0.09222597;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
+         style="opacity:1;fill:none;fill-opacity:1;stroke:#000000;stroke-width:0.192;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:0.50248754" />
     </g>
     <g
        transform="translate(41.388508,22.500001)"
-       id="g2515-3-5-7-2-0-0">
+       id="g2515-3-5-7-2-0-0"
+       style="stroke:#000000;stroke-opacity:0.50248754">
       <circle
          r="1.953887"
          cy="76"
          cx="38"
          id="path1027-8-8-1-8-2-36-1-7-7-1-9-3"
-         style="opacity:1;fill:none;fill-opacity:1;stroke:#000000;stroke-width:0.09222597;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
+         style="opacity:1;fill:none;fill-opacity:1;stroke:#000000;stroke-width:0.192;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:0.50248754" />
     </g>
     <g
        transform="translate(41.388508,27)"
-       id="g2515-3-6-9-0-2-6-7">
+       id="g2515-3-6-9-0-2-6-7"
+       style="stroke:#000000;stroke-opacity:0.50248754">
       <circle
          r="1.953887"
          cy="76"
          cx="38"
          id="path1027-8-8-1-8-2-36-1-2-7-3-1-6-9"
-         style="opacity:1;fill:none;fill-opacity:1;stroke:#000000;stroke-width:0.09222597;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
+         style="opacity:1;fill:none;fill-opacity:1;stroke:#000000;stroke-width:0.192;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:0.50248754" />
     </g>
     <g
        id="g2515-0-5-1"
-       transform="translate(45.888504,-13.500001)">
+       transform="translate(45.888504,-13.500001)"
+       style="stroke:#000000;stroke-opacity:1">
       <circle
          r="1.953887"
          cy="76"
          cx="38"
          id="path1027-8-8-1-8-2-36-0-2-9"
-         style="opacity:1;fill:none;fill-opacity:1;stroke:#000000;stroke-width:0.09222597;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
+         style="opacity:1;fill:none;fill-opacity:1;stroke:#000000;stroke-width:0.192;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
     </g>
     <g
        id="g2512-3-1-4"
        transform="translate(45.888504,-13.500001)" />
     <g
        transform="translate(45.888504,-9.0000024)"
-       id="g2515-3-60-9-6">
+       id="g2515-3-60-9-6"
+       style="stroke:#000000;stroke-opacity:1">
       <circle
          r="1.953887"
          cy="76"
          cx="38"
          id="path1027-8-8-1-8-2-36-1-25-9-5"
-         style="opacity:1;fill:none;fill-opacity:1;stroke:#000000;stroke-width:0.09222597;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
+         style="opacity:1;fill:none;fill-opacity:1;stroke:#000000;stroke-width:0.192;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
     </g>
     <g
        transform="translate(45.888504,-9.0000024)"
        id="g2512-7-8-1-9" />
     <g
        transform="translate(45.888504,-4.5000034)"
-       id="g2515-3-6-06-5-1">
+       id="g2515-3-6-06-5-1"
+       style="stroke:#000000;stroke-opacity:1">
       <circle
          r="1.953887"
          cy="76"
          cx="38"
          id="path1027-8-8-1-8-2-36-1-2-0-8-1"
-         style="opacity:1;fill:none;fill-opacity:1;stroke:#000000;stroke-width:0.09222597;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
+         style="opacity:1;fill:none;fill-opacity:1;stroke:#000000;stroke-width:0.192;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
     </g>
     <g
        transform="translate(45.888504,-4.5000034)"
        id="g2512-7-1-83-5-4" />
     <g
        transform="translate(45.888504,-1.3501976e-6)"
-       id="g2515-3-5-1-3-2">
+       id="g2515-3-5-1-3-2"
+       style="stroke:#000000;stroke-opacity:1">
       <circle
          r="1.953887"
          cy="76"
          cx="38"
          id="path1027-8-8-1-8-2-36-1-7-0-8-7"
-         style="opacity:1;fill:none;fill-opacity:1;stroke:#000000;stroke-width:0.09222597;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
+         style="opacity:1;fill:none;fill-opacity:1;stroke:#000000;stroke-width:0.192;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
     </g>
     <g
        transform="translate(45.888504,-1.3501976e-6)"
        id="g2512-7-4-58-9-3" />
     <g
        transform="translate(45.888504,4.4999976)"
-       id="g2515-3-6-9-07-3-2">
+       id="g2515-3-6-9-07-3-2"
+       style="stroke:#000000;stroke-opacity:1">
       <circle
          r="1.953887"
          cy="76"
          cx="38"
          id="path1027-8-8-1-8-2-36-1-2-7-38-8-4"
-         style="opacity:1;fill:none;fill-opacity:1;stroke:#000000;stroke-width:0.09222597;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
+         style="opacity:1;fill:none;fill-opacity:1;stroke:#000000;stroke-width:0.192;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
     </g>
     <g
        transform="translate(45.888504,4.4999976)"
        id="g2512-7-1-5-23-6-4" />
     <g
        id="g2515-8-7-3-9"
-       transform="translate(45.888504,8.9999986)">
+       transform="translate(45.888504,8.9999986)"
+       style="stroke:#000000;stroke-opacity:1">
       <circle
          r="1.953887"
          cy="76"
          cx="38"
          id="path1027-8-8-1-8-2-36-3-7-6-3"
-         style="opacity:1;fill:none;fill-opacity:1;stroke:#000000;stroke-width:0.09222597;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
+         style="opacity:1;fill:none;fill-opacity:1;stroke:#000000;stroke-width:0.192;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
     </g>
     <g
        id="g2512-1-6-1-8"
        transform="translate(45.888504,8.9999986)" />
     <g
        transform="translate(45.888504,13.499998)"
-       id="g2515-3-4-1-0-9">
+       id="g2515-3-4-1-0-9"
+       style="stroke:#000000;stroke-opacity:1">
       <circle
          r="1.953887"
          cy="76"
          cx="38"
          id="path1027-8-8-1-8-2-36-1-3-9-5-5"
-         style="opacity:1;fill:none;fill-opacity:1;stroke:#000000;stroke-width:0.09222597;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
+         style="opacity:1;fill:none;fill-opacity:1;stroke:#000000;stroke-width:0.192;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
     </g>
     <g
        transform="translate(45.888504,13.499998)"
        id="g2512-7-3-0-1-4" />
     <g
        transform="translate(45.888504,18.000002)"
-       id="g2515-3-6-0-8-3-4">
+       id="g2515-3-6-0-8-3-4"
+       style="stroke:#000000;stroke-opacity:1">
       <circle
          r="1.953887"
          cy="76"
          cx="38"
          id="path1027-8-8-1-8-2-36-1-2-4-8-0-9"
-         style="opacity:1;fill:none;fill-opacity:1;stroke:#000000;stroke-width:0.09222597;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
+         style="opacity:1;fill:none;fill-opacity:1;stroke:#000000;stroke-width:0.192;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
     </g>
     <g
        transform="translate(45.888504,22.500001)"
-       id="g2515-3-5-7-0-4-3">
+       id="g2515-3-5-7-0-4-3"
+       style="stroke:#000000;stroke-opacity:1">
       <circle
          r="1.953887"
          cy="76"
          cx="38"
          id="path1027-8-8-1-8-2-36-1-7-7-6-2-9"
-         style="opacity:1;fill:none;fill-opacity:1;stroke:#000000;stroke-width:0.09222597;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
+         style="opacity:1;fill:none;fill-opacity:1;stroke:#000000;stroke-width:0.192;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
     </g>
     <g
        transform="translate(45.888504,27)"
-       id="g2515-3-6-9-0-7-9-7">
+       id="g2515-3-6-9-0-7-9-7"
+       style="stroke:#000000;stroke-opacity:1">
       <circle
          r="1.953887"
          cy="76"
          cx="38"
          id="path1027-8-8-1-8-2-36-1-2-7-3-7-4-2"
-         style="opacity:1;fill:none;fill-opacity:1;stroke:#000000;stroke-width:0.09222597;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
+         style="opacity:1;fill:none;fill-opacity:1;stroke:#000000;stroke-width:0.192;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
     </g>
     <g
        id="g2515-2-0"
-       transform="translate(58.88851,-13.500001)">
+       transform="translate(58.88851,-13.500001)"
+       style="stroke:#000000;stroke-opacity:1">
       <circle
          r="1.953887"
          cy="76"
          cx="38"
          id="path1027-8-8-1-8-2-36-7-4"
-         style="opacity:1;fill:none;fill-opacity:1;stroke:#000000;stroke-width:0.09222597;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
+         style="opacity:1;fill:none;fill-opacity:1;stroke:#000000;stroke-width:0.192;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
     </g>
     <g
        id="g2512-15-1"
        transform="translate(58.88851,-13.500001)" />
     <g
        transform="translate(58.88851,-9.0000024)"
-       id="g2515-3-56-3">
+       id="g2515-3-56-3"
+       style="stroke:#000000;stroke-opacity:1">
       <circle
          r="1.953887"
          cy="76"
          cx="38"
          id="path1027-8-8-1-8-2-36-1-5-62"
-         style="opacity:1;fill:none;fill-opacity:1;stroke:#000000;stroke-width:0.09222597;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
+         style="opacity:1;fill:none;fill-opacity:1;stroke:#000000;stroke-width:0.192;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
     </g>
     <g
        transform="translate(58.88851,-9.0000024)"
        id="g2512-7-6-12" />
     <g
        transform="translate(58.88851,-4.5000034)"
-       id="g2515-3-6-8-18">
+       id="g2515-3-6-8-18"
+       style="stroke:#000000;stroke-opacity:1">
       <circle
          r="1.953887"
          cy="76"
          cx="38"
          id="path1027-8-8-1-8-2-36-1-2-8-8"
-         style="opacity:1;fill:none;fill-opacity:1;stroke:#000000;stroke-width:0.09222597;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
+         style="opacity:1;fill:none;fill-opacity:1;stroke:#000000;stroke-width:0.192;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
     </g>
     <g
        transform="translate(58.88851,-4.5000034)"
        id="g2512-7-1-3-7" />
     <g
        transform="translate(58.88851,-1.3501976e-6)"
-       id="g2515-3-5-2-27">
+       id="g2515-3-5-2-27"
+       style="stroke:#000000;stroke-opacity:1">
       <circle
          r="1.953887"
          cy="76"
          cx="38"
          id="path1027-8-8-1-8-2-36-1-7-4-9"
-         style="opacity:1;fill:none;fill-opacity:1;stroke:#000000;stroke-width:0.09222597;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
+         style="opacity:1;fill:none;fill-opacity:1;stroke:#000000;stroke-width:0.192;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
     </g>
     <g
        transform="translate(58.88851,-1.3501976e-6)"
        id="g2512-7-4-50-19" />
     <g
        transform="translate(58.88851,4.4999996)"
-       id="g2515-3-6-9-7-6">
+       id="g2515-3-6-9-7-6"
+       style="stroke:#000000;stroke-opacity:1">
       <circle
          r="1.953887"
          cy="76"
          cx="38"
          id="path1027-8-8-1-8-2-36-1-2-7-2-84"
-         style="opacity:1;fill:none;fill-opacity:1;stroke:#000000;stroke-width:0.09222597;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
+         style="opacity:1;fill:none;fill-opacity:1;stroke:#000000;stroke-width:0.192;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
     </g>
     <g
        transform="translate(58.88851,4.4999996)"
        id="g2512-7-1-5-1-66" />
     <g
        id="g2515-8-9-74"
-       transform="translate(58.88851,8.9999986)">
+       transform="translate(58.88851,8.9999986)"
+       style="stroke:#000000;stroke-opacity:1">
       <circle
          r="1.953887"
          cy="76"
          cx="38"
          id="path1027-8-8-1-8-2-36-3-4-1"
-         style="opacity:1;fill:none;fill-opacity:1;stroke:#000000;stroke-width:0.09222597;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
+         style="opacity:1;fill:none;fill-opacity:1;stroke:#000000;stroke-width:0.192;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
     </g>
     <g
        id="g2512-1-1-0"
        transform="translate(58.88851,8.9999986)" />
     <g
        transform="translate(58.88851,13.499998)"
-       id="g2515-3-4-4-4">
+       id="g2515-3-4-4-4"
+       style="stroke:#000000;stroke-opacity:1">
       <circle
          r="1.953887"
          cy="76"
          cx="38"
          id="path1027-8-8-1-8-2-36-1-3-1-4"
-         style="opacity:1;fill:none;fill-opacity:1;stroke:#000000;stroke-width:0.09222597;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
+         style="opacity:1;fill:none;fill-opacity:1;stroke:#000000;stroke-width:0.192;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
     </g>
     <g
        transform="translate(58.88851,13.499998)"
        id="g2512-7-3-2-3" />
     <g
        transform="translate(58.88851,18.000002)"
-       id="g2515-3-6-0-6-4">
+       id="g2515-3-6-0-6-4"
+       style="stroke:#000000;stroke-opacity:1">
       <circle
          r="1.953887"
          cy="76"
          cx="38"
          id="path1027-8-8-1-8-2-36-1-2-4-2-7"
-         style="opacity:1;fill:none;fill-opacity:1;stroke:#000000;stroke-width:0.09222597;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
+         style="opacity:1;fill:none;fill-opacity:1;stroke:#000000;stroke-width:0.192;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
     </g>
     <g
        transform="translate(58.88851,22.500001)"
-       id="g2515-3-5-7-7-9">
+       id="g2515-3-5-7-7-9"
+       style="stroke:#000000;stroke-opacity:1">
       <circle
          r="1.953887"
          cy="76"
          cx="38"
          id="path1027-8-8-1-8-2-36-1-7-7-4-56"
-         style="opacity:1;fill:none;fill-opacity:1;stroke:#000000;stroke-width:0.09222597;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
+         style="opacity:1;fill:none;fill-opacity:1;stroke:#000000;stroke-width:0.192;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
     </g>
     <g
        transform="translate(58.88851,27)"
-       id="g2515-3-6-9-0-1-1">
+       id="g2515-3-6-9-0-1-1"
+       style="stroke:#000000;stroke-opacity:1">
       <circle
          r="1.953887"
          cy="76"
          cx="38"
          id="path1027-8-8-1-8-2-36-1-2-7-3-4-5"
-         style="opacity:1;fill:none;fill-opacity:1;stroke:#000000;stroke-width:0.09222597;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
+         style="opacity:1;fill:none;fill-opacity:1;stroke:#000000;stroke-width:0.192;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
     </g>
     <g
        id="g2515-1-2-6"
-       transform="translate(63.388509,-13.500001)">
+       transform="translate(63.388509,-13.500001)"
+       style="stroke:#000000;stroke-opacity:0.50248754">
       <circle
          r="1.953887"
          cy="76"
          cx="38"
          id="path1027-8-8-1-8-2-36-5-7-2"
-         style="opacity:1;fill:none;fill-opacity:1;stroke:#000000;stroke-width:0.09222597;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
+         style="opacity:1;fill:none;fill-opacity:1;stroke:#000000;stroke-width:0.192;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:0.50248754" />
     </g>
     <g
        id="g2512-0-7-1"
        transform="translate(63.388509,-13.500001)" />
     <g
        transform="translate(63.388509,-9.0000024)"
-       id="g2515-3-40-1-3">
+       id="g2515-3-40-1-3"
+       style="stroke:#000000;stroke-opacity:0.50248754">
       <circle
          r="1.953887"
          cy="76"
          cx="38"
          id="path1027-8-8-1-8-2-36-1-1-0-2"
-         style="opacity:1;fill:none;fill-opacity:1;stroke:#000000;stroke-width:0.09222597;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
+         style="opacity:1;fill:none;fill-opacity:1;stroke:#000000;stroke-width:0.192;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:0.50248754" />
     </g>
     <g
        transform="translate(63.388509,-9.0000024)"
        id="g2512-7-37-7-1" />
     <g
        transform="translate(63.388509,-4.5000034)"
-       id="g2515-3-6-1-1-6">
+       id="g2515-3-6-1-1-6"
+       style="stroke:#000000;stroke-opacity:0.50248754">
       <circle
          r="1.953887"
          cy="76"
          cx="38"
          id="path1027-8-8-1-8-2-36-1-2-3-0-82"
-         style="opacity:1;fill:none;fill-opacity:1;stroke:#000000;stroke-width:0.09222597;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
+         style="opacity:1;fill:none;fill-opacity:1;stroke:#000000;stroke-width:0.192;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:0.50248754" />
     </g>
     <g
        transform="translate(63.388509,-4.5000034)"
        id="g2512-7-1-0-2-0" />
     <g
        transform="translate(63.388509,-1.3501976e-6)"
-       id="g2515-3-5-75-9-33">
+       id="g2515-3-5-75-9-33"
+       style="stroke:#000000;stroke-opacity:0.50248754">
       <circle
          r="1.953887"
          cy="76"
          cx="38"
          id="path1027-8-8-1-8-2-36-1-7-6-7-6"
-         style="opacity:1;fill:none;fill-opacity:1;stroke:#000000;stroke-width:0.09222597;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
+         style="opacity:1;fill:none;fill-opacity:1;stroke:#000000;stroke-width:0.192;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:0.50248754" />
     </g>
     <g
        transform="translate(63.388509,-1.3501976e-6)"
        id="g2512-7-4-5-1-9" />
     <g
        transform="translate(63.388509,4.4999976)"
-       id="g2515-3-6-9-1-2-5">
+       id="g2515-3-6-9-1-2-5"
+       style="stroke:#000000;stroke-opacity:0.50248754">
       <circle
          r="1.953887"
          cy="76"
          cx="38"
          id="path1027-8-8-1-8-2-36-1-2-7-7-0-1"
-         style="opacity:1;fill:none;fill-opacity:1;stroke:#000000;stroke-width:0.09222597;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
+         style="opacity:1;fill:none;fill-opacity:1;stroke:#000000;stroke-width:0.192;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:0.50248754" />
     </g>
     <g
        transform="translate(63.388509,4.4999976)"
        id="g2512-7-1-5-2-6-2" />
     <g
        id="g2515-8-6-4-3"
-       transform="translate(63.388509,8.9999986)">
+       transform="translate(63.388509,8.9999986)"
+       style="stroke:#000000;stroke-opacity:0.50248754">
       <circle
          r="1.953887"
          cy="76"
          cx="38"
          id="path1027-8-8-1-8-2-36-3-5-9-8"
-         style="opacity:1;fill:none;fill-opacity:1;stroke:#000000;stroke-width:0.09222597;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
+         style="opacity:1;fill:none;fill-opacity:1;stroke:#000000;stroke-width:0.192;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:0.50248754" />
     </g>
     <g
        id="g2512-1-7-2-0"
        transform="translate(63.388509,8.9999986)" />
     <g
        transform="translate(63.388509,13.499998)"
-       id="g2515-3-4-9-5-31">
+       id="g2515-3-4-9-5-31"
+       style="stroke:#000000;stroke-opacity:0.50248754">
       <circle
          r="1.953887"
          cy="76"
          cx="38"
          id="path1027-8-8-1-8-2-36-1-3-2-9-8"
-         style="opacity:1;fill:none;fill-opacity:1;stroke:#000000;stroke-width:0.09222597;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
+         style="opacity:1;fill:none;fill-opacity:1;stroke:#000000;stroke-width:0.192;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:0.50248754" />
     </g>
     <g
        transform="translate(63.388509,13.499998)"
        id="g2512-7-3-7-1-7" />
     <g
        transform="translate(63.388509,18.000002)"
-       id="g2515-3-6-0-4-9-3">
+       id="g2515-3-6-0-4-9-3"
+       style="stroke:#000000;stroke-opacity:0.50248754">
       <circle
          r="1.953887"
          cy="76"
          cx="38"
          id="path1027-8-8-1-8-2-36-1-2-4-7-6-8"
-         style="opacity:1;fill:none;fill-opacity:1;stroke:#000000;stroke-width:0.09222597;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
+         style="opacity:1;fill:none;fill-opacity:1;stroke:#000000;stroke-width:0.192;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:0.50248754" />
     </g>
     <g
        transform="translate(-0.11149139,18.000002)"
@@ -1915,13 +2018,14 @@
        id="g2512-7-1-8-9-0-5" />
     <g
        transform="translate(63.388509,22.500001)"
-       id="g2515-3-5-7-2-0-1">
+       id="g2515-3-5-7-2-0-1"
+       style="stroke:#000000;stroke-opacity:0.50248754">
       <circle
          r="1.953887"
          cy="76"
          cx="38"
          id="path1027-8-8-1-8-2-36-1-7-7-1-9-2"
-         style="opacity:1;fill:none;fill-opacity:1;stroke:#000000;stroke-width:0.09222597;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
+         style="opacity:1;fill:none;fill-opacity:1;stroke:#000000;stroke-width:0.192;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:0.50248754" />
     </g>
     <g
        transform="translate(-0.11149139,22.500001)"
@@ -1958,13 +2062,14 @@
        id="g2512-7-4-6-6-4-6" />
     <g
        transform="translate(63.388509,27)"
-       id="g2515-3-6-9-0-2-6-5">
+       id="g2515-3-6-9-0-2-6-5"
+       style="stroke:#000000;stroke-opacity:0.50248754">
       <circle
          r="1.953887"
          cy="76"
          cx="38"
          id="path1027-8-8-1-8-2-36-1-2-7-3-1-6-6"
-         style="opacity:1;fill:none;fill-opacity:1;stroke:#000000;stroke-width:0.09222597;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
+         style="opacity:1;fill:none;fill-opacity:1;stroke:#000000;stroke-width:0.192;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:0.50248754" />
     </g>
     <g
        transform="translate(-0.11149139,27)"
@@ -3268,13 +3373,14 @@
     </g>
     <g
        id="g2515-1-2-6-6"
-       transform="translate(140.48736,-3.5053196)">
+       transform="translate(140.48736,-3.5053196)"
+       style="stroke-width:0.1;stroke-miterlimit:4;stroke-dasharray:none">
       <circle
          r="1.953887"
          cy="76"
          cx="38"
          id="path1027-8-8-1-8-2-36-5-7-2-0"
-         style="opacity:1;fill:none;fill-opacity:1;stroke:#000000;stroke-width:0.09222597;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
+         style="opacity:1;fill:none;fill-opacity:1;stroke:#000037;stroke-width:0.1;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
     </g>
     <text
        xml:space="preserve"
@@ -3301,8 +3407,8 @@
     <circle
        style="opacity:1;fill:#000000;fill-opacity:1;stroke:#000000;stroke-width:0.09222597;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
        id="path1027-5-4-4-9-8-9"
-       cx="178.47484"
-       cy="72.54734"
+       cx="178.5739"
+       cy="78.025017"
        r="1.953887" />
     <rect
        style="opacity:1;fill:none;fill-opacity:1;stroke:#000000;stroke-width:0.1006996;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:0.70588235"
@@ -6470,7 +6576,7 @@
            height="348.79556"
            x="848.23828"
            y="670.57837" /></flowRegion><flowPara
-         id="flowPara13318"></flowPara></flowRoot>    <rect
+         id="flowPara13318" /></flowRoot>    <rect
        style="opacity:1;fill:none;fill-opacity:1;stroke:#000000;stroke-width:0.1006996;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:0.70588235"
        id="rect216-74"
        width="11.276672"
