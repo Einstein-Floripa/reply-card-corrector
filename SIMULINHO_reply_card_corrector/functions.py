@@ -7,7 +7,7 @@ import os
 DEBUG = False
 
 # Upper bound
-upper_boud_lecture = [250, 130, 130]
+upper_boud_lecture = [255, 150, 150]
 
 
 def distance_between(pt1, pt2):
@@ -24,7 +24,10 @@ def show_img(img):
         @return: None
     """
     cv.imshow('Image', img)
-    cv.waitKey(0)
+    while True:
+        if cv.waitKey(1) & 0xFF == ord('q'):
+            break
+
     cv.destroyAllWindows()
 
 
@@ -241,7 +244,7 @@ def read_cpf(img, cpf_pos):
 
                 else:
                     logs.append('Falha na leitura do digito ' +
-                                str(digit + 1) + 'duplo preenchimento')
+                                str(digit + 1) + 'duplo preenchimento\n')
                     return ['FAILED', logs]
 
         if not find_d:
@@ -304,7 +307,13 @@ def find_squares(img):
 
     # The params passed to find_binary_mask on this case can be ajusted
     # according to the printing
-    mask = find_binary_mask(img, [0, 0, 0], [180, 180, 180])
+    mask = find_binary_mask(img, [0, 0, 0], [200, 200, 200])
+
+    kernel = np.ones((20, 20), np.uint8)
+    mask = cv.dilate(mask, kernel)
+    kernel = np.ones((20, 20), np.uint8)
+    mask = cv.erode(mask, kernel)
+
     _, contours, hierarchy = cv.findContours(mask,
                                              cv.RETR_TREE,
                                              cv.CHAIN_APPROX_SIMPLE)
@@ -337,16 +346,16 @@ def find_squares(img):
         # Arbitrary division of the page. Just separate all square-like
         # contours in four groups based on their most internal  points,
         # the ones in top_left region, top_right, etc
-        if rect[2][0] < width/6 and rect[2][1] < height/10:
+        if rect[2][0] < width/7 and rect[2][1] < height/11:
             top_left_cnts.append(cnt)
 
-        elif rect[3][0] > width*5/6 and rect[3][1] < height/10:
+        elif rect[3][0] > width*5/6 and rect[3][1] < height/11:
             top_right_cnts.append(cnt)
 
         elif rect[0][0] > width*5/6 and rect[0][1] > height*9/10:
             bot_right_cnts.append(cnt)
 
-        elif rect[1][0] < width/6 and rect[1][1] > height*9/10:
+        elif rect[1][0] < width/7 and rect[1][1] > height*9/10:
             bot_left_cnts.append(cnt)
 
     if DEBUG:
@@ -365,9 +374,14 @@ def find_squares(img):
     top_right_cnts.sort(key=lambda k: cv.contourArea(k), reverse=True)
     bot_right_cnts.sort(key=lambda k: cv.contourArea(k), reverse=True)
     bot_left_cnts.sort(key=lambda k: cv.contourArea(k), reverse=True)
-
-    return [top_left_cnts[0], top_right_cnts[0],
-            bot_right_cnts[0], bot_left_cnts[0]]
+    try:
+        return [top_left_cnts[0], top_right_cnts[0],
+                bot_right_cnts[0], bot_left_cnts[0]]
+    except:
+        if DEBUG:
+            show_img(mask)
+        else:
+            raise Exception("Problems while locating squares to adjust image")
 
 
 # Find max width, height and the rect of the page,

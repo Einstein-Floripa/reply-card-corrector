@@ -8,7 +8,7 @@ import os
 DEBUG = False
 
 # Upper bound
-upper_boud_lecture = [250, 130, 130]
+upper_boud_lecture = [255, 150, 150]
 
 Point = namedtuple('Point', ['x', 'y'])
 Question = namedtuple('Question', ['ten', 'unit'])
@@ -28,7 +28,10 @@ def show_img(img):
         @return: None
     """
     cv.imshow('Image', img)
-    cv.waitKey(0)
+    while True:
+        if cv.waitKey(1) & 0xFF == ord('q'):
+            break
+
     cv.destroyAllWindows()
 
 
@@ -70,19 +73,19 @@ def read_response(warp, response_pos):
 
         if double_ten:
             value = ''
-            logs.append('Duplo preenchimento dezena: ' + question)
+            logs.append('Duplo preenchimento dezena: ' + question + '\n')
 
         if double_unit:
             value = ''
-            logs.append('Duplo preenchimento unidade: ' + question)
+            logs.append('Duplo preenchimento unidade: ' + question + '\n')
 
         if not find_unit:
             value = ''
-            logs.append('Sem preenchimento unidade: ' + question)
+            logs.append('Sem preenchimento unidade: ' + question + '\n')
 
         if not find_ten:
             value = ''
-            logs.append('Sem preenchimento dezena: ' + question)
+            logs.append('Sem preenchimento dezena: ' + question + '\n')
 
         lecture[question] = value
 
@@ -239,7 +242,7 @@ def read_cpf(img, cpf_pos):
 
                 else:
                     logs.append('Falha na leitura do digito ' +
-                                str(digit + 1) + 'duplo preenchimento')
+                                str(digit + 1) + 'duplo preenchimento\n')
                     return ['FAILED', logs]
 
         if not find_d:
@@ -304,7 +307,13 @@ def find_squares(img):
 
     # The params passed to find_binary_mask on this case can be ajusted
     # according to the printing
-    mask = find_binary_mask(img, [0, 0, 0], [190, 190, 190])
+    mask = find_binary_mask(img, [0, 0, 0], [200, 200, 200])
+
+    kernel = np.ones((20, 20), np.uint8)
+    mask = cv.dilate(mask, kernel)
+    kernel = np.ones((20, 20), np.uint8)
+    mask = cv.erode(mask, kernel)
+
     _, contours, hierarchy = cv.findContours(mask,
                                              cv.RETR_TREE,
                                              cv.CHAIN_APPROX_SIMPLE)
@@ -365,9 +374,14 @@ def find_squares(img):
     top_right_cnts.sort(key=lambda k: cv.contourArea(k), reverse=True)
     bot_right_cnts.sort(key=lambda k: cv.contourArea(k), reverse=True)
     bot_left_cnts.sort(key=lambda k: cv.contourArea(k), reverse=True)
-
-    return [top_left_cnts[0], top_right_cnts[0],
-            bot_right_cnts[0], bot_left_cnts[0]]
+    try:
+        return [top_left_cnts[0], top_right_cnts[0],
+                bot_right_cnts[0], bot_left_cnts[0]]
+    except:
+        if DEBUG:
+            show_img(mask)
+        else:
+            raise Exception("Problems while locating squares to adjust image")
 
 
 # Find max width, height and the rect of the page,
@@ -534,6 +548,12 @@ def correct_image_angle(img):
         @return img on the right orientation
     """
     mask = find_binary_mask(img, [0, 0, 0], [180, 180, 180])
+
+    kernel = np.ones((20, 20), np.uint8)
+    mask = cv.dilate(mask, kernel)
+    kernel = np.ones((20, 20), np.uint8)
+    mask = cv.erode(mask, kernel)
+
     _, contours, hierarchy = cv.findContours(mask,
                                              cv.RETR_TREE,
                                              cv.CHAIN_APPROX_SIMPLE)
