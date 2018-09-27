@@ -43,7 +43,7 @@ def read_response(warp, response_pos):
         @return [lecture, logs]
     """
     # Make a mask based on warped image
-    correction_mask = find_binary_mask(warp, [0, 0, 0], [180, 180, 180])
+    correction_mask = find_binary_mask(warp, [0, 0, 0], [255, 200, 200])
     lecture = dict()
     logs = list()
     for question in response_pos:
@@ -106,7 +106,7 @@ def get_response_pos():
     x_dis_between_box100_box110 = 20
     y_dis_between_box100_box101 = 20
 
-    x_dis_between_item_another_box = 64.5
+    x_dis_between_item_another_box = 65
     y_dis_between_item_another_box = 239
 
     positions = dict()

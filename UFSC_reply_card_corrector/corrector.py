@@ -35,6 +35,7 @@ def run():
             subs_table.append(row)
 
     for sub_row in subs_table:
+        print(sub_row[0])
         tmp = dict()
         tmp['name'] = sub_row[0]
         tmp['cpf'] = sub_row[1]
