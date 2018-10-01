@@ -29,11 +29,11 @@ def run():
 
         scanned = cv.imread(samples_path + filename)
 
-        scanned = correct_image_angle(scanned)
-
         squares = find_squares(scanned)
 
         warped = adjust_to_squares(squares, scanned)
+
+        warped = correct_image_angle(warped)
 
         responses_positions = get_response_pos()
         responses, logs_ans = read_response(warped, responses_positions)

@@ -83,7 +83,7 @@ def get_cpf_pos():
     positions = dict()
 
     x_dis_digit_1_0 = 175
-    y_dis_digit_1_0 = 285
+    y_dis_digit_1_0 = 335
 
     x_dis_between_digits_in_block = 21
     y_dis_between_digitis_in_block = 22
@@ -464,8 +464,8 @@ def correct_image_angle(img):
 
 def check_day(warped):
     correction_mask = find_binary_mask(warped, [0, 0, 0], [180, 180, 180])
-    pos_1 = Point(x=873, y=336)
-    pos_2 = Point(x=873, y=361)
+    pos_1 = Point(x=880, y=396)
+    pos_2 = Point(x=880, y=421)
 
     if check_square(correction_mask, pos_1):
         return 1
@@ -602,8 +602,8 @@ if __name__ == '__main__':
                              (pt.x + 1,  pt.y + 1),
                              (0, 0, 255))
 
-        pos_1 = Point(x=873, y=336)
-        pos_2 = Point(x=873, y=361)
+        pos_1 = Point(x=880, y=396)
+        pos_2 = Point(x=880, y=421)
 
         cv.rectangle(warped,
                      (pos_1.x-1, pos_1.y-1),
