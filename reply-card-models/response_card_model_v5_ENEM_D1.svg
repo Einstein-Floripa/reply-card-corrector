@@ -16,7 +16,7 @@
    version="1.1"
    id="svg8"
    inkscape:version="0.92.2 2405546, 2018-03-11"
-   sodipodi:docname="response_card_model_v4 _ENEM_D1.svg">
+   sodipodi:docname="response_card_model_v5_ENEM_D1.svg">
   <defs
      id="defs2" />
   <sodipodi:namedview
@@ -26,9 +26,9 @@
      borderopacity="1.0"
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
-     inkscape:zoom="2"
-     inkscape:cx="402.55465"
-     inkscape:cy="832.30219"
+     inkscape:zoom="18.1875"
+     inkscape:cx="664.62711"
+     inkscape:cy="843.61459"
      inkscape:document-units="mm"
      inkscape:current-layer="layer1"
      showgrid="false"
@@ -46,7 +46,7 @@
         <dc:format>image/svg+xml</dc:format>
         <dc:type
            rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
-        <dc:title />
+        <dc:title></dc:title>
       </cc:Work>
     </rdf:RDF>
   </metadata>
@@ -5533,8 +5533,8 @@
     <circle
        style="opacity:1;fill:#000000;fill-opacity:1;stroke:#000000;stroke-width:0.09222597;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
        id="path1027-5-4-4-9-8-9"
-       cx="178.47484"
-       cy="72.54734"
+       cx="178.55754"
+       cy="72.479729"
        r="1.953887" />
     <g
        id="g2515-3"
@@ -7964,5 +7964,42 @@
        d="m 38.157621,81.438731 c 0,-0.318926 -0.006,-0.32218 -0.590661,-0.32218 -0.45552,0 -0.590663,-0.03715 -0.590663,-0.162375 0,-0.295076 0.984715,-1.663308 1.19708,-1.663308 0.176089,0 0.199031,0.09285 0.199031,0.80545 0,0.644358 0.03222,0.805447 0.161088,0.805447 0.0886,0 0.161092,0.04833 0.161092,0.107394 0,0.05907 -0.07249,0.107392 -0.161092,0.107392 -0.107391,0 -0.161088,0.107394 -0.161088,0.32218 0,0.1772 -0.04833,0.322181 -0.107392,0.322181 -0.05907,0 -0.107395,-0.144981 -0.107395,-0.322181 z m 0,-1.235022 c 0,-0.383929 -0.03704,-0.698052 -0.0823,-0.698052 -0.06723,0 -0.735311,1.013266 -0.866338,1.313957 -0.01968,0.04518 0.1857,0.08215 0.456422,0.08215 h 0.492217 z"
        id="path6551"
        inkscape:connector-curvature="0" />
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:4.93888855px;line-height:1.25;font-family:sans-serif;-inkscape-font-specification:'sans-serif, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:justify;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.26458332"
+       x="151.74884"
+       y="93.077209"
+       id="text12514"><tspan
+         sodipodi:role="line"
+         id="tspan12512"
+         x="151.74884"
+         y="93.077209"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:7.05555534px;font-family:'Fira Sans';-inkscape-font-specification:'Fira Sans';stroke-width:0.26458332">SimulENEM</tspan><tspan
+         sodipodi:role="line"
+         x="151.74884"
+         y="99.887016"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:4.23333311px;font-family:'Fira Sans';-inkscape-font-specification:'Fira Sans';stroke-width:0.26458332"
+         id="tspan12516">Data:    /    /</tspan></text>
+    <flowRoot
+       xml:space="preserve"
+       id="flowRoot12518"
+       style="fill:black;fill-opacity:1;stroke:none;font-family:sans-serif;font-style:normal;font-weight:normal;font-size:18.66666667px;line-height:1.25;letter-spacing:0px;word-spacing:0px;-inkscape-font-specification:'sans-serif, Normal';font-stretch:normal;font-variant:normal;text-anchor:start;text-align:justify;writing-mode:lr;font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal"><flowRegion
+         id="flowRegion12520"><rect
+           id="rect12522"
+           width="64.072136"
+           height="28.61474"
+           x="531.86096"
+           y="362.98495" /></flowRegion><flowPara
+         id="flowPara12524"></flowPara></flowRoot>    <text
+       xml:space="preserve"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:4.93888855px;line-height:1.25;font-family:sans-serif;-inkscape-font-specification:'sans-serif, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:justify;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.26458332"
+       x="164.422"
+       y="100.15443"
+       id="text12539"><tspan
+         sodipodi:role="line"
+         id="tspan12537"
+         x="164.422"
+         y="100.15443"
+         style="stroke-width:0.26458332">  </tspan></text>
   </g>
 </svg>

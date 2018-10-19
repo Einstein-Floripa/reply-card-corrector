@@ -10,5 +10,5 @@ setup(
 
     license='MIT',
 
-    install_requires=["opencv-python", "numpy"],
+    install_requires=["opencv-python", "numpy", "docopt'"],
 )

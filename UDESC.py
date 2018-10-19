@@ -1,14 +1,13 @@
 import numpy as np
 import cv2 as cv
 import os
-from functions import *
+import functions.UDESC_only_functions as uf
+import functions.common_functions as cf
 
 
-def run():
-    app_folder = 'ENEM_reply_card_corrector/'
+def run(app_folder, samples_path):
     failures_path = app_folder + 'results/failures/'
     successes_path = app_folder + 'results/successes/'
-    samples_path = app_folder + 'scans/'
     output_csv = app_folder + 'info/data.csv'
 
     samples = os.listdir(samples_path)
@@ -29,19 +28,19 @@ def run():
 
         scanned = cv.imread(samples_path + filename)
 
-        scanned = correct_image_angle(scanned)
+        scanned = cf.correct_image_angle(scanned)
 
-        squares = find_squares(scanned)
+        squares = cf.find_squares(scanned)
 
-        warped = adjust_to_squares(squares, scanned)
+        warped = cf.adjust_to_squares(squares, scanned)
 
-        responses_positions = get_response_pos()
-        responses, logs_ans = read_response(warped, responses_positions)
+        responses_positions = ef.get_response_pos()
+        responses, logs_ans = ef.read_response(warped, responses_positions)
 
-        cpf_positions = get_cpf_pos()
-        cpf, logs_cpf = read_cpf(warped, cpf_positions)
+        cpf_positions = ef.get_cpf_pos()
+        cpf, logs_cpf = cf.read_cpf(warped, cpf_positions)
 
-        day = check_day(warped)
+        day = uf.check_day(warped)
 
         # draw squares on the points to verify possible errors
         for key in cpf_positions:
@@ -62,13 +61,13 @@ def run():
         # image will be placed on failures
         if cpf == 'FAILED':
             failure_count += 1
-            generate_error_report(scanned, warped, squares,
-                                  [*logs_cpf, *logs_ans],
-                                  failure_count, responses_positions,
-                                  cpf_positions, failures_path, responses,
-                                  day, headers)
+            cf.generate_error_report(scanned, warped, squares,
+                                     [*logs_cpf, *logs_ans],
+                                     failure_count, responses_positions,
+                                     cpf_positions, failures_path, responses,
+                                     day, headers)
 
         else:
             success_count += 1
-            export_to(responses, cpf, output_csv, headers, day)
+            cf.export_to(responses, cpf, output_csv, headers, day)
             save_logs(logs_cpf, logs_ans, warped, cpf, successes_path, day)

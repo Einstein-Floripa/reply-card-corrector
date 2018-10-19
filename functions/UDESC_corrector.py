@@ -1,12 +1,12 @@
 import csv
 import os
-from answers import *
 from operator import itemgetter
 
+empty = dict([('q' + str(i+1).zfill(2), '') for i in range(50)])
 
-def run():
+
+def run(app_folder):
     print('Linking tables...')
-    app_folder = 'ENEM_reply_card_corrector/'
     answers_table_path = app_folder + 'info/data.csv'
     subscribers_table_path = app_folder + 'info/subscribers.csv'
     output_data_path = app_folder + 'info/organized_data.csv'

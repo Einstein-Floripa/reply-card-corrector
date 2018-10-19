@@ -1,17 +1,16 @@
-from collections import namedtuple
-import cv2 as cv
 import numpy as np
-import csv
+import cv2 as cv
 import os
-
-# Debugging ways
-DEBUG = False
+from collections import namedtuple
 
 # Upper bound
-upper_boud_lecture = [255, 150, 150]
+upper_boud_lecture = [255, 180, 180]
 
+# Point named tuple
 Point = namedtuple('Point', ['x', 'y'])
-Question = namedtuple('Question', ['ten', 'unit'])
+
+
+DEBUG = False
 
 
 def distance_between(pt1, pt2):
@@ -23,9 +22,7 @@ def distance_between(pt1, pt2):
 
 
 def show_img(img):
-    """ @param img: image to be displayed until key pressed
-
-        @return: None
+    """ @param img: image to be displayed until 'q' key pressed
     """
     cv.imshow('Image', img)
     while True:
@@ -33,113 +30,6 @@ def show_img(img):
             break
 
     cv.destroyAllWindows()
-
-
-# Read responses from warped  image, based  on positions
-def read_response(warp, response_pos):
-    """ @param warp: warped image got from adjust_to_squares
-        @param response_pos: response positions read from get_response_pos
-
-        @return [lecture, logs]
-    """
-    # Make a mask based on warped image
-    correction_mask = find_binary_mask(warp, [0, 0, 0], [180, 180, 180])
-    lecture = dict()
-    logs = list()
-    for question in response_pos:
-        find_unit = False
-        find_ten = False
-        double_unit = False
-        double_ten = False
-        value = 0
-
-        for n, pt in enumerate(response_pos[question].unit):
-            if check_square(correction_mask, pt):
-                if not find_unit:
-                    value += n
-                    find_unit = True
-
-                else:
-                    double_unit = True
-
-        for n, pt in enumerate(response_pos[question].ten):
-            if check_square(correction_mask, pt):
-                if not find_ten:
-                    value += n*10
-                    find_ten = True
-
-                else:
-                    double_ten = True
-
-        if double_ten:
-            value = ''
-            logs.append('Duplo preenchimento dezena: ' + question + '\n')
-
-        if double_unit:
-            value = ''
-            logs.append('Duplo preenchimento unidade: ' + question + '\n')
-
-        if not find_unit:
-            value = ''
-            logs.append('Sem preenchimento unidade: ' + question + '\n')
-
-        if not find_ten:
-            value = ''
-            logs.append('Sem preenchimento dezena: ' + question + '\n')
-
-        lecture[question] = value
-
-    return [lecture, logs]
-
-
-# Define positions
-def get_response_pos():
-    """ @return a dict with positions of the circles, need
-        to be adjusted for every reply-card format
-
-    """
-    # UFSC_format size (1017, 1401)
-    # box XYZ { X = question, Y = 1=>unit, 0=>dec, Z = line}
-    x_dis_border_box100 = 80
-    y_dis_border_box100 = 550
-
-    x_dis_between_box100_box110 = 20
-    y_dis_between_box100_box101 = 20
-
-    x_dis_between_item_another_box = 64.5
-    y_dis_between_item_another_box = 239
-
-    positions = dict()
-
-    # One question per box
-    #  ______________________
-    # |Box 01 |  ...  | Box 14|
-    # |_______|_______|_______|
-    # |Box 15 |  ...  | Box 28|
-    # |_______|_______|_______|
-    # |Box 29 |  .. Box40 |
-    # |       |           |
-    # |_______|___________|
-
-    for q in range(40):
-        question = list()
-        q_number = 'q' + str(q + 1).zfill(2)
-        for side in range(2):       # side 0 - > dec, side 1 - > unit
-            column = list()
-            for item in range(10):
-                x = int(x_dis_border_box100 +
-                        x_dis_between_box100_box110*side +
-                        x_dis_between_item_another_box*(q % 14))
-                y = int(y_dis_border_box100 +
-                        y_dis_between_box100_box101*item +
-                        y_dis_between_item_another_box*(q//14))
-                column.append(Point(x=x, y=y))
-
-            question.append(column)
-
-        positions[q_number] = Question(ten=question[0], unit=question[1])
-
-    return positions
 
 
 def find_binary_mask(img_rgb, lower_bound: list, upper_bound: list):
@@ -178,124 +68,6 @@ def check_square(mask, pt):
         return True
     else:
         return False
-
-# CPF fields positions
-
-
-def get_cpf_pos():
-    """ @return a dict with positions of the circles, need
-        to be adjusted for every reply-card format
-
-    """
-    positions = dict()
-
-    x_dis_digit_1_0 = 175
-    y_dis_digit_1_0 = 285
-
-    x_dis_between_digits_in_block = 21
-    y_dis_between_digitis_in_block = 22
-    x_dis_between_blocks = 28
-    x_dis_between_last_block_to_regular_blocks = 48
-
-    for digit in range(11):
-        nums = list()
-        for item in range(10):
-            x = int(x_dis_digit_1_0 +
-                    x_dis_between_digits_in_block * digit +
-                    x_dis_between_blocks * ((digit > 2) + (digit > 5)) +
-                    x_dis_between_last_block_to_regular_blocks * (digit > 8))
-
-            y = int(y_dis_digit_1_0 +
-                    y_dis_between_digitis_in_block * item)
-
-            nums.append(Point(x=x, y=y))
-
-        positions[digit] = nums
-
-    return positions
-
-
-def read_cpf(img, cpf_pos):
-    """ @param img: scanned image
-        @cpf_pos: dict of positions taken from get_cpf_pos function
-
-        @return [cpf, logs] where cpf is a string with 11 numbers, 3 dots and
-        a slash. logs  is a list of strings.
-    """
-    # Make a mask based on warped image
-    h, w, _ = img.shape
-    if (h != 1401 or w != 1017):
-        img = cv.resize(img, (1017, 1401))
-
-    mask = find_binary_mask(img, [0, 0, 0], upper_boud_lecture)
-
-    digits = list()
-    logs = list()
-
-    for digit in cpf_pos:
-        find_d = False
-        for number, pt in enumerate(cpf_pos[digit]):
-            if (check_square(mask, pt)):
-                if not find_d:
-                    digits.append(number)
-                    find_d = True
-
-                else:
-                    logs.append('Falha na leitura do digito ' +
-                                str(digit + 1) + 'duplo preenchimento\n')
-                    return ['FAILED', logs]
-
-        if not find_d:
-            logs.append('Falta de digito: ' + str(digit + 1) + '\n')
-            return ['FAILED', logs]
-
-    # Format the cpf to return as string
-    cpf = ''.join([str(n) for n in digits[0:3]]) + '.' + \
-          ''.join([str(n) for n in digits[3:6]]) + '.' + \
-          ''.join([str(n) for n in digits[6:9]]) + '-' + \
-          ''.join([str(n) for n in digits[9:11]])
-
-    return [cpf, logs]
-
-
-def save_logs(logs_cpf, logs_ans, scanned, cpf, path, day):
-    """ @param logs_cpf: logs returned by read_cpf
-        @param logs_ans: logs returned by read_answers
-        @param scanned: image read from scans folder
-        @param cpf: string cpf read from read_cpf func
-        @param path: path to the file, where the data will be saved
-        @param day: day of the test
-
-        Save informations about the correction, to future verification
-
-        @return None
-    """
-    with open(path + cpf + '-' + str(day) + '.txt', 'w') as f:
-        for item in logs_cpf:
-            f.write(item)
-
-        for item in logs_ans:
-            f.write(item)
-
-    cv.imwrite(path + cpf + '-' + str(day) + '.jpg', scanned)
-
-
-def export_to(responses, cpf, filename, headers, day):
-    """ @param responses: read answers
-        @param cpf: read cpf
-        @param filename: name of file to be appended the data
-        @param headers: headers wrotten on file at the beggining
-        @param day: 1 or 2, corresponding to the day of test
-
-        Append read information to the output file
-
-        @return None
-    """
-    with open(filename, 'a') as f:
-        responses['cpf'] = cpf
-        responses['day'] = day
-        writer = csv.DictWriter(f, headers)
-        writer.writerow(responses)
 
 
 def find_squares(img):
@@ -383,9 +155,10 @@ def find_squares(img):
         else:
             raise Exception("Problems while locating squares to adjust image")
 
-
 # Find max width, height and the rect of the page,
 # defined with four points
+
+
 def find_max_wd(rect):
     """ @param rect: four point contour, expect to be a regular square
 
@@ -474,6 +247,79 @@ def adjust_to_squares(squares, img):
     return warp
 
 
+def correct_image_angle(img):
+    """ @param img: img to be corrected, using as reference
+       the rectangle on top of page
+
+        @return img on the right orientation
+    """
+    mask = find_binary_mask(img, [0, 0, 0], [180, 180, 180])
+    _, contours, hierarchy = cv.findContours(mask,
+                                             cv.RETR_TREE,
+                                             cv.CHAIN_APPROX_SIMPLE)
+
+    height, width, _ = img.shape
+    biggest_area = 0
+
+    for cnt in contours:
+        area = cv.contourArea(cnt)
+        x, y, w, h = cv.boundingRect(cnt)
+        if area > biggest_area and (y > height*13/14 or (y+h) < height/14):
+            biggest_area = area
+            ref_cnt = cnt
+
+    x, y, w, h = cv.boundingRect(ref_cnt)
+    if y > height*9/10:
+        return cv.rotate(img, cv.ROTATE_180)
+
+    else:
+        return img
+
+
+def read_cpf(img, cpf_pos):
+    """ @param img: scanned image
+        @cpf_pos: dict of positions taken from get_cpf_pos function
+
+        @return [cpf, logs] where cpf is a string with 11 numbers, 3 dots and
+        a slash.
+        logs  is a list of strings.
+    """
+    # Make a mask based on warped image
+    h, w, _ = img.shape
+    if (h != 1401 or w != 1017):
+        img = cv.resize(img, (1017, 1401))
+
+    mask = find_binary_mask(img, [0, 0, 0], upper_boud_lecture)
+
+    digits = list()
+    logs = list()
+
+    for digit in cpf_pos:
+        find_d = False
+        for number, pt in enumerate(cpf_pos[digit]):
+            if (check_square(mask, pt)):
+                if not find_d:
+                    digits.append(number)
+                    find_d = True
+
+                else:
+                    logs.append('Falha na leitura do digito ' +
+                                str(digit + 1) + 'duplo preenchimento\n')
+                    return ['FAILED', logs]
+
+        if not find_d:
+            logs.append('Falta de digito: ' + str(digit + 1) + '\n')
+            return ['FAILED', logs]
+
+    # Format the cpf to return as string
+    cpf = ''.join([str(n) for n in digits[0:3]]) + '.' + \
+          ''.join([str(n) for n in digits[3:6]]) + '.' + \
+          ''.join([str(n) for n in digits[6:9]]) + '-' + \
+          ''.join([str(n) for n in digits[9:11]])
+
+    return [cpf, logs]
+
+
 def generate_error_report(scanned, warped, squares, logs, count,
                           ans_pos, cpf_pos, path, responses, day, headers):
     """ @param scanned: scanned image from scans folder
@@ -505,7 +351,8 @@ def generate_error_report(scanned, warped, squares, logs, count,
 
     fail = 'Failure_' + str(count)
     path += fail + '/'
-    os.mkdir(path)
+    if not os.path.isdir(path):
+        os.mkdir(path)
 
     tmp = cv.drawContours(scanned, squares, -1, (0, 0, 255), 2)
     cv.imwrite(path + 'Scanned_Found_Squares' + fail + '.jpg', tmp)
@@ -513,12 +360,11 @@ def generate_error_report(scanned, warped, squares, logs, count,
     tmp = warped.copy()
 
     for q in ans_pos:
-        for col in ans_pos[q]:
-            for pt in col:
-                cv.rectangle(tmp,
-                             (pt.x - 1, pt.y - 1),
-                             (pt.x + 1, pt.y + 1),
-                             (0, 0, 255), 1)
+        for pt in ans_pos[q]:
+            cv.rectangle(tmp,
+                         (pt.x - 1, pt.y - 1),
+                         (pt.x + 1, pt.y + 1),
+                         (0, 0, 255), 1)
 
     for digit in cpf_pos:
         for pt in cpf_pos[digit]:
@@ -539,76 +385,3 @@ def generate_error_report(scanned, warped, squares, logs, count,
         writer = csv.DictWriter(f, headers)
         writer.writeheader()
         writer.writerow(responses)
-
-
-def correct_image_angle(img):
-    """ @param img: img to be corrected, using as reference
-       the rectangle on top of page
-
-        @return img on the right orientation
-    """
-    mask = find_binary_mask(img, [0, 0, 0], [180, 180, 180])
-
-    kernel = np.ones((20, 20), np.uint8)
-    mask = cv.dilate(mask, kernel)
-    kernel = np.ones((20, 20), np.uint8)
-    mask = cv.erode(mask, kernel)
-
-    _, contours, hierarchy = cv.findContours(mask,
-                                             cv.RETR_TREE,
-                                             cv.CHAIN_APPROX_SIMPLE)
-
-    height, width, _ = img.shape
-    biggest_area = 0
-
-    for cnt in contours:
-        area = cv.contourArea(cnt)
-        x, y, w, h = cv.boundingRect(cnt)
-        if area > biggest_area and (y > height*13/14 or (y+h) < height/14):
-            biggest_area = area
-            ref_cnt = cnt
-
-    x, y, w, h = cv.boundingRect(ref_cnt)
-    if y > height*9/10:
-        return cv.rotate(img, cv.ROTATE_180)
-
-    else:
-        return img
-
-
-def check_day(warped):
-    correction_mask = find_binary_mask(warped, [0, 0, 0], [180, 180, 180])
-    pos_1 = Point(x=873, y=336)
-    pos_2 = Point(x=873, y=361)
-
-    if check_square(correction_mask, pos_1):
-        return 1
-    elif check_square(correction_mask, pos_2):
-        return 2
-
-
-if __name__ == '__main__':
-    img = cv.imread('scans/scan0180.jpg')
-    warped = adjust_to_squares(find_squares(img), img)
-
-    responses_pos = get_response_pos()
-
-    for key in responses_pos:
-        for side in responses_pos[key]:
-            for pt in side:
-                cv.rectangle(warped,
-                             (pt.x - 1, pt.y - 1),
-                             (pt.x + 1, pt.y + 1),
-                             (0, 0, 255))
-
-    cpf_positions = get_cpf_pos()
-
-    for key in cpf_positions.keys():
-        for pt in cpf_positions[key]:
-            cv.rectangle(warped,
-                         (pt.x - 1, pt.y - 1),
-                         (pt.x + 1, pt.y + 1),
-                         (0, 0, 255), 1)
-
-    lecture, logs_lecture = read_response(warped, responses_pos)
-    cpf, logs_cpf = read_cpf(warped, cpf_positions)
